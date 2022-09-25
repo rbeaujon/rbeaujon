@@ -1,7 +1,3 @@
-<p align="left">
-<img src="/assets/pictures/me.png" width="30%"/>  
-</p>
-
 <h4 align="center"> Hi, welcome to my portfolio 👋 </h4>
 
 
@@ -12,7 +8,7 @@
 <img src="/assets/icons/move.png" width="10%">
 <img src="/assets/icons/estonia.png" width="20%">
 </div>
-
+<p>
 <p>My name is Ricardo Beaujon, I have been living in Tallinn Estonia since 2017.
 <p>I’m an IT industry professional with a degree in Computer Science from Nueva Esparta University, Caracas, Venezuela (2009).
 <p>I'm a proactive and energetic person who likes to learn, improve and use my skills in the best way possible.
