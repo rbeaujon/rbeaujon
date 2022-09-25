@@ -5,7 +5,7 @@
 
 <div float="left">
 <img src="/assets/icons/venezuela.png" width="15%">
-<img src="/assets/icons/move.png" width="10%">
+<img src="/assets/icons/move4.png" width="10%">
 <img src="/assets/icons/estonia.png" width="20%">
 </div>
 <p>
