@@ -9,7 +9,7 @@
 
 <div float="left">
 <img src="/assets/icons/venezuela.png" width="15%">
-<img src="/assets/icons/move.svg" width="10%">
+<img src="/assets/icons/move.png" width="10%">
 <img src="/assets/icons/estonia.png" width="20%">
 </div>
 
@@ -33,15 +33,15 @@
 <img src="/assets/icons/html5.svg" width="10%">
 <img src="/assets/icons/graphql.svg" width="10%">
 <img src="/assets/icons/mysql.svg" width="10%">
-<img src="/assets/icons/sql.svg" width="10%">
-<img src="/assets/icons/php.jpg" width="10%">
+<img src="/assets/icons/sql.png" width="10%">
+<img src="/assets/icons/php.png" width="10%">
 </div>
 
 ## Hand-On Experience
 <div float="left">
-<img src="/assets/icons/angular.svg" width="10%">
+<img src="/assets/icons/angularjs.svg" width="10%">
 <img src="/assets/icons/docker.svg" width="10%">
-<img src="/assets/icons/postgresql.svg" width="10%">
+<img src="/assets/icons/postgresql.png" width="10%">
 </div>
 
 ## Others
@@ -62,11 +62,13 @@
 
 ## Contacts
 
-<p align="left">
-<a href="https://linkedin.com/in/rbeaujon/" target="blank"><img align="center" src="/assets/icons/linkedin.png" alt="Ricardo Beaujon" height="30" width="40" /></a>
-<a href="mailto:rbeaujon77@gmail.com " target="blank"><img align="center" src="/assets/icons/gmail.jpg" alt="Email" height="30" width="40" /></a>
-<a href="https://www.instagram.com/rbeaujon/" target="blank"><img align="center" src="/assets/icons/instagram.svg" alt="Instagram" height="30" width="40" /></a>
-<a href="https://www.facebook.com/rbeaujon" target="blank"><img align="center" src="/assets/icons/facebook.svg" alt="Facebook" height="30" width="40" /></a>
-</p>
+<a href="https://linkedin.com/in/rbeaujon/" target="blank"><img align="center" src="/assets/icons/linkedIn.png" alt="Ricardo Beaujon" height="30" width="40" />LinkedIn</a>
+<p>
+<a href="mailto:rbeaujon77@gmail.com " target="blank"><img align="center" src="/assets/icons/gmail.jpg" alt="Email" height="30" width="40" />Gmail</a>
+<p>
+<a href="https://www.instagram.com/rbeaujon/" target="blank"><img align="center" src="/assets/icons/instagram.png" alt="Instagram" height="30" width="40" />Instagram</a>
+<p>
+<a href="https://www.facebook.com/rbeaujon" target="blank"><img align="center" src="/assets/icons/facebook.png" alt="Facebook" height="30" width="40" />Facebook</a>
+
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=rbeaujon&hide_border=true)](https://git.io/streak-stats)
