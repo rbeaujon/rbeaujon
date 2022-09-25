@@ -1,4 +1,4 @@
-<h4 align="center"> Hi, welcome to my portfolio 👋 </h4>
+<h3 align="center"> Hi, welcome to my portfolio 👋 </h3>
 
 
 ## About me
