@@ -62,13 +62,10 @@
 
 ## Contacts
 
-<a href="https://linkedin.com/in/rbeaujon/"  target="_blank"><img align="center" src="/assets/icons/linkedIn.png" alt="Ricardo Beaujon" height="40" width="40" />LinkedIn</a>
-<p>
-<a href="mailto:rbeaujon77@gmail.com " target="_blank"><img align="center" src="/assets/icons/gmail.jpg" alt="Email" height="40" width="40" />Gmail</a>
-<p>
-<a href="https://www.instagram.com/rbeaujon/" target="_blank"><img align="center" src="/assets/icons/instagram.png" alt="Instagram" height="40" width="40" />Instagram</a>
-<p>
-<a href="https://www.facebook.com/rbeaujon" target="_blank"><img align="center" src="/assets/icons/facebook.png" alt="Facebook" height="40" width="40" />Facebook</a>
+<a href="https://linkedin.com/in/rbeaujon/"  target="_blank"><img align="center" src="/assets/icons/linkedIn.png" alt="Ricardo Beaujon" height="40" width="40" /></a> |
+<a href="mailto:rbeaujon77@gmail.com " target="_blank"><img align="center" src="/assets/icons/gmail.jpg" alt="Email" height="40" width="40" /></a> |
+<a href="https://www.instagram.com/rbeaujon/" target="_blank"><img align="center" src="/assets/icons/instagram.png" alt="Instagram" height="40" width="40" /></a> |
+<a href="https://www.facebook.com/rbeaujon" target="_blank"><img align="center" src="/assets/icons/facebook.png" alt="Facebook" height="40" width="40" /></a>
 
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=rbeaujon&hide_border=true)](https://git.io/streak-stats)
