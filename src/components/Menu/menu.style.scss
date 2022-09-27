@@ -56,12 +56,11 @@ and (orientation: portrait)   {
 	.navigation {
 		
 		nav {
-			& .menu {
-				gap: 0.1vw;
+			padding-right: 38vw !important;
+			 #menu {
 				li {
-					width: 20vw;
 					div {
-						font-size: 3.5vw;
+						font-size: 3.4vw !important;
 					}
 				}
 				

@@ -2,7 +2,11 @@ import './Portfolio.scss';
 
 const Portfolio = () => {
 	return (
-		<div className="textBg">Portfolio</div>
+		<div>
+			<div className="textBg">Portfolio</div>
+			<span id="effect"></span>
+		</div>
+
 	)
 	
 }
