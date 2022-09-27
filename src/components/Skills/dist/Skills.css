@@ -1,0 +1,93 @@
+.Skills {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.Skills span {
+  position: absolute;
+  font-size: 1.5vw;
+  text-align: justify;
+  margin: -7vh 0 0 0vw;
+  background: rgba(102, 102, 104, 0.404);
+  box-shadow: 0px 0px 20px 0px #feffff64;
+}
+.Skills #experience {
+  position: relative;
+  padding-left: 120px;
+  margin: 10vh 0 0 0vw;
+}
+.Skills #experience div {
+  display: flex;
+  gap: 1.2vw;
+}
+.Skills #handsOn {
+  position: relative;
+  margin: 10vh 0 0 30vw;
+}
+.Skills #handsOn div {
+  display: flex;
+  gap: 1.2vw;
+}
+.Skills #others {
+  position: relative;
+  padding-left: 120px;
+  margin: 10vh 0 0 30vw;
+}
+.Skills #others div {
+  display: flex;
+  gap: 1.2vw;
+}
+.Skills #network {
+  position: relative;
+  padding-left: 280px;
+  margin: 10vh 0 0 30vw;
+}
+.Skills #effect {
+  width: 10vw;
+  background: rgba(135, 135, 137, 0);
+  height: 12vh;
+  margin: -2vh 0 0 30vw;
+  animation: bg 0.7s ease-out;
+  z-index: 1;
+}
+.Skills img {
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.Skills img:hover {
+  animation: icons 0.7s ease-out;
+}
+@keyframes icons {
+  0% {
+    filter: grayscale(0%) blur(0px);
+  }
+  60% {
+    filter: grayscale(100%) blur(40px);
+  }
+  100% {
+    filter: grayscale(0%) blur(0px);
+  }
+}
+@keyframes bg {
+  0% {
+    transform: translate(0, 0);
+    opacity: 20;
+    visibility: visible;
+  }
+  50% {
+    transform: translate(40vw, -10vh);
+    opacity: 100;
+    visibility: visible;
+  }
+  80% {
+    transform: translate(60vw, 20vh);
+    opacity: 100;
+    visibility: visible;
+  }
+  100% {
+    transform: translate(60vw, 20vh);
+    opacity: 0;
+    visibility: visible;
+  }
+}

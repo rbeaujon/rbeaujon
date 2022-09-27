@@ -13,7 +13,7 @@
 <p>Venezuelan living in Estonia since 2017.
 <p>Degree in Computer Science from Nueva Esparta University, Caracas, Venezuela (2009).
 <p>I'm a proactive and energetic person who likes to learn, improve and use my skills in the best way possible.
-<p>The jokes are part of my life, I like very much to make them and give positive energies to people.
+<p>The jokes are part of my life, I like a lot joking around and by doing so give people positive energy.
 <p>Communication, trust, and being humble are very important things for me. Hmmm yes, I hate lies.
 <p>My hobbies are dancing and photography.
 

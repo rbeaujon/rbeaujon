@@ -1,0 +1,124 @@
+.About {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: #000000;
+	scroll-margin: 10vh;
+	.container {
+		position: absolute;
+		width: 70vw;
+		color: rgba(255, 132, 1, 0.812);
+		font-size: 1.3vw;
+		text-align: justify;
+		border-radius: 40px;
+		padding: 50px;
+		border: 0.5px solid rgba(255, 254, 254, 0.091);
+		margin: 10vh 0 -20px 15vw ;	
+		box-shadow: 0px 0px 20px 0px #feffff64;;
+	}
+	&:hover div {
+		&#particle {
+			animation: particle 8s ease;
+			animation-delay: 0.5s;
+		}
+	}
+	&:hover img {
+		&#venezuela {
+			animation: venezuela 4s ease ;
+			animation-delay: 0.5s;
+			animation-fill-mode: forwards;
+		}
+		&#estonia {	
+			animation: estonia 10s ease ;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
+		}
+	}
+	
+	#particle{
+		position: absolute;
+		width: 0.1vw;
+		margin: 12vh 0 0 20vw;
+		border: 1px solid;
+		visibility:hidden;
+		box-shadow: 1px 1px 15px 5px rgb(4, 209, 250);
+		border-radius: 50%;
+	}
+
+	img {
+
+		&#venezuela {
+			position: absolute;
+			width: 40vw;
+			visibility:hidden;
+			transform: rotate(-5deg);
+			margin: 0vh 0 0 5vw;
+		}
+		&#estonia{
+			position: absolute;
+			width: 35vw;
+			visibility:hidden;
+			transform: rotate(5deg);
+			margin: 25vh 0 0 60vw;
+		}
+	}
+	@keyframes venezuela {
+		0% {
+			filter: blur(0%);
+			visibility: visible;
+			opacity: 0;
+		}
+		50% {
+			visibility: visible;
+			opacity: 0.5;
+		}
+		100% {
+			visibility: visible;
+			opacity: 0.05;
+		}
+		
+	}
+	@keyframes estonia {
+		0% {
+			filter: blur(0%);
+			visibility: visible;
+			opacity: 0;
+		}
+		50% {
+			visibility: visible;
+			opacity: 0.5;
+		}
+		100% {
+			visibility: visible;
+			opacity: 0.07;
+		}
+		
+	}
+	@keyframes particle {
+		
+		0% {
+			transform: translate(0, 0); 
+			opacity: 20;
+			visibility: visible;
+		}
+		50% {
+			transform: translate(40vw, -10vh);
+			opacity: 100;
+			visibility: visible;
+		}
+		80% {
+			transform: translate(60vw, 20vh);
+			opacity: 100;
+			visibility: visible;
+		}
+		100% {
+			transform: translate(60vw, 20vh);
+			opacity: 0;
+			visibility: visible;
+		}
+		
+	}
+}
+
+
+
