@@ -1,0 +1,88 @@
+.Skills {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+
+	span {
+		position: absolute ;
+		font-size: 1.5vw;
+		text-align: justify;
+		margin: -7vh 0 0 0vw;	
+		background: rgba(102, 102, 104, 0.404);
+		box-shadow: 0px 0px 20px 0px #feffff64;;
+		
+	}
+	
+	#experience {
+		position:relative;
+		padding-left: 120px;
+		margin: 10vh 0 0 0vw;
+		div {
+			display: flex;
+			gap: 1.2vw;
+		}		
+	}
+	#handsOn {
+		position:relative;
+		margin: 10vh 0 0 30vw;
+		div {
+			display: flex;
+			gap: 1.2vw;
+		}	
+	}
+	#others {
+		position:relative;
+		padding-left: 120px;
+		margin: 10vh 0 0 30vw;
+		div {
+			display: flex;
+			gap: 1.2vw;
+		}	
+	}
+	#network {
+		position:relative;
+		padding-left: 280px;
+		margin: 10vh 0 0 30vw;
+	}
+	#effect { 
+		background: rgba(135, 135, 137, 0.898);
+		margin: -15vh 0 0 -5vw;
+		border-radius: 50%;
+		border-right: 1px solid;
+		box-shadow: 0px 0px 30px 10px rgb(4, 209, 250);
+		animation: bg 2s ease-out infinite alternate ;
+		animation-delay: 1s;
+		animation-fill-mode: forwards;
+
+	}
+	img {
+		width: 70px;
+		height:70px;
+		&:hover {
+			animation: icons 0.7s ease-out ;
+		}
+	}
+	@keyframes icons {
+		
+		0% {
+			filter:grayscale(0%) blur(0px);
+		}
+		60% {
+			filter: grayscale(100%) blur(7px);
+		}
+		100% {
+			filter:grayscale(0%) blur(0px);
+		}
+	} 
+	@keyframes bg {
+		
+		0% {
+			transform: translate(0, 0); 
+		}
+		100% {
+			transform: translate(18vw, 0vh);
+			opacity: 0;
+		}
+		
+	}
+}
