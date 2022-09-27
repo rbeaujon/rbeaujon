@@ -21,10 +21,10 @@ function Home() {
         <div className="welcome">
           { welcome.map(letter  =>  <span className={letter === " " ? "spanEmpty" : ""}>{letter}</span> )} 
         </div>
-        <div id="name">Ricardo Beaujon</div>
-        <div id="title">Full-Stack Developer</div>
         <div id="picture"><img src={me} alt="Ricardo Beaujon"></img></div>
         <div id="circle"></div>
+        <div id="name">Ricardo Beaujon</div>
+        <div id="title">Full-Stack Developer</div>   
         <div id="arrow">
           <img src={arrow} alt="next section"  onClick={() => document.getElementById('about').scrollIntoView({behavior: 'smooth'})} />
         </div>

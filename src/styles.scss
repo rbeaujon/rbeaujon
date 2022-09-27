@@ -6,10 +6,10 @@
 	font-family: Hack, monospace;
 	left: -1vw;
 	.textBg {
-		font-size: 5vw;
+		font-size: 50px;
 		margin-left: 2vw;
 		color: #cc600200;
-		text-shadow: 5px 2px 7px rgba(197, 197, 197, 0.313);
+		text-shadow: 5px 2px 7px rgba(197, 197, 197, 0.687);
 	}
 }
 .spinLoader {
@@ -50,6 +50,9 @@
 and (min-width : 320px)
 and (max-width : 568px) 
 and (orientation: portrait)   {
+	.Main{
+		left: -2.1vw;
+	}
 
   }
 

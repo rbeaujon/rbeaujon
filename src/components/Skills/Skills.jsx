@@ -32,7 +32,7 @@ const Skills = () => {
 					<span>Working experience</span>
 					<span id="effect"></span>
 					<div>
-						<img src={react} alt=""/>
+					<img src={react} alt=""/>
 						<img src={redux} alt=""/>
 						<img src={ts} alt="" />
 						<img src={js} alt=""/>
