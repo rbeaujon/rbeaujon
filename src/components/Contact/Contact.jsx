@@ -4,6 +4,7 @@ import gmail  from '../../assets/icons/gmail.png'
 import instagram  from '../../assets/icons/instagram.png'
 import facebook  from '../../assets/icons/facebook2.png'
 import ws  from '../../assets/icons/ws.png'
+import github  from '../../assets/icons/github.png'
 
 
 const Contact = () => {
@@ -16,6 +17,7 @@ const Contact = () => {
 				<a href="https://www.instagram.com/rbeaujon/" target="_blank"><img align="center" src={instagram} alt="Instagram"/></a> 
 				<a href="https://www.facebook.com/rbeaujon" target="_blank"><img align="center" src={facebook} alt="Facebook"/></a> 
 				<a href="https://wa.me/+37253560174" target="_blank"><img align="center" src={ws} alt="Facebook"/></a>
+				<a href="https://github.com/rbeaujon" target="_blank"><img align="center" src={github} alt="GitHub"/></a>
 			</div>
 		</div>
 		
