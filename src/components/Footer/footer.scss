@@ -3,7 +3,6 @@
 	width: 100vw;
 	height: 8vh;
 	scroll-margin: 10vh;
-	background: rgba(60, 59, 59, 0.243);
 }
 
 #info {
@@ -11,20 +10,66 @@
 		font-size: 1.2vw;
 		text-align: justify;
 		margin: 3vh 0 0 40vw;	
-		color: #fcfcfb98;
-		text-shadow: 0px 0px 7px rgba(197, 197, 197, 0.406);
 }
 
+.On {
+	.Footer {
+		background: rgba(19, 19, 19, 0.844);
+		
+		#info {
+			color: #fffefe;
+			text-shadow: 1px 1px 3px rgba(7, 7, 7, 0.954);
+		}
+	}
+}
 
+.Off {
+	.Footer {
+		background: rgba(60, 59, 59, 0.243);
+		
+		#info {
+			color: #bab6b6;
+			text-shadow: 0px 0px 10px rgb(243, 242, 242);
+		}
+	}
+}
 /* RESPONSIVE DESIGN FOR MOBILE */
 
 /* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
 
 
 /****** PORTRAIT *************/
+
 @media  only screen 
-and (min-width : 320px)
-and (max-width : 568px) 
+and (min-width : 200px)
+and (orientation: portrait)   {
+	#info {
+		position: absolute ;
+			font-size: 4vw;
+			text-align: justify;
+			margin: 10px 0 0 80px;
+			color: #fcfcfb98;
+			text-shadow: 0px 0px 7px rgba(197, 197, 197, 0.406);
+	}
+	
+  }
+
+@media  only screen 
+and (min-width : 360px)
+and (orientation: portrait)   {
+	#info {
+		position: absolute ;
+			font-size: 4vw;
+			text-align: justify;
+			margin: 15px 0 0 90px;
+			color: #fcfcfb98;
+			text-shadow: 0px 0px 7px rgba(197, 197, 197, 0.406);
+	}
+	
+  }
+
+@media  only screen 
+and (min-width : 400px)
 and (orientation: portrait)   {
 	#info {
 		position: absolute ;

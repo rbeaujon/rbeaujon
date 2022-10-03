@@ -1,21 +1,16 @@
 .menu {
 	position:fixed;
+	width: 100vw;
 	top: 0;
-	z-index: 1;
+	z-index: 100;
 
 .navigation {
-	width: 100vw;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
 	font-family: Hack, monospace;
 
 	& nav {
 		background: #0b0b0bcd;
 		text-align: right;
-		width: 100vw;
-		padding-right: 5vw;
-		padding-left: 30vw;
+		padding-right: 10vw;
 		& #menu {
 		  list-style: none;
 		  display:inline-flex;
@@ -25,7 +20,7 @@
 			& :hover {
 				//border-bottom: 3px solid #05b9d4;
 				color: #05b9d4;
-				font-size: 1.7vw;
+				transform: scale(1.2, 1.5);
 			}
 	  
 			div {
@@ -50,28 +45,65 @@
 
 /****** PORTRAIT *************/
 @media  only screen 	
-and (min-width : 320px)
-and (max-width : 568px) 
+and (min-width : 200px) 
 and (orientation: portrait)   {
 	.navigation {
 		
 		nav {
-			padding-right: 38vw !important;
 			 #menu {
 				li {
-					div {
-						font-size: 3.4vw !important;
+					& div {
+						font-size: 3.2vw !important;
 					}
-				}
-				
+				}	
 			}
-
 		}
-	
 	}
-
   }
 
+@media  only screen 	
+  and (min-width : 360px)
+  and (orientation: portrait)   {
+	  .navigation {
+		  
+		  nav {
+			   #menu {
+				  li {
+					  div {
+						  font-size: 3.2vw !important;
+					  }
+				  }
+				  
+			  }
+  
+		  }
+	  
+	  }
+  
+	}
+	
+@media  only screen 	
+	and (min-width : 380px)
+	and (orientation: portrait)   {
+		.navigation {
+			
+			nav {
+				 #menu {
+					li {
+						div {
+							font-size: 3.2vw !important;
+						}
+					}
+					
+				}
+	
+			}
+		
+		}
+	
+	  }
+
+	  
 /****** LANDSCAPE *************/
 
 @media  only screen 

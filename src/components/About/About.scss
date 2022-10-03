@@ -2,19 +2,16 @@
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	background: #000000;
 	padding-top: 80px;
 	.container {
 		position: absolute;
 		width: 70vw;
-		color: rgb(255, 255, 255);
 		font-size: 1.3vw;
 		text-align: justify;
 		border-radius: 40px;
 		padding: 50px;
-		border: 0.5px solid rgba(255, 254, 254, 0.091);
 		margin: 10vh 0 -20px 15vw ;	
-		box-shadow: 0px 0px 20px 0px #feffff64;;
+		
 	}
 	&:hover div {
 		&#particle {
@@ -34,7 +31,6 @@
 			animation-fill-mode: forwards;
 		}
 	}
-	
 	#particle{
 		position: absolute;
 		width: 0.1vw;
@@ -44,7 +40,6 @@
 		box-shadow: 1px 1px 15px 5px rgb(4, 209, 250);
 		border-radius: 50%;
 	}
-
 	img {
 
 		&#venezuela {
@@ -122,7 +117,22 @@
 	}
 }
 
+.On {
+	.container {
+		color: rgb(32, 31, 31);
+		border: 0.5px solid rgba(124, 119, 119, 0.542);
+		box-shadow: 0px 0px 20px 1px #173e4392;;
+	}
+}
 
+.Off {
+	.container {
+		color: rgb(255, 255, 255);
+		border: 0.5px solid rgba(255, 254, 254, 0.091);
+		box-shadow: 0px 0px 20px 0px #434848cc;;
+	}
+
+}
 /* RESPONSIVE DESIGN FOR MOBILE */
 
 /* HIGH RESOLUTION such as IPHONE 13Pro until mid range */
@@ -130,20 +140,138 @@
 
 /****** PORTRAIT *************/
 @media  only screen 
-and (min-width : 320px)
-and (max-width : 568px) 
+and (min-width : 200px)
 and (orientation: portrait)   {
 	.About {
-		height: 120vh;
-		padding-top: 80px;
+		height: 160vh;
+		padding-top: 50px;
+		.container {
+			width: 200px;
+			height: 650px;
+			font-size: 16px;
+			text-align:left;
+			padding: 25px 40px 40px 40px;
+			margin: 50px 0px 10px 25px;	
+			}
+			&:hover div {
+				&#particle {
+					animation: particle 6s ease;
+				}
+			}
+		img {
+
+			&#venezuela {
+					width: 220px;
+					margin: 150px 0 0 15px;
+				}
+			&#estonia{
+					width: 200px;
+					margin: 550px 0 0 120px;
+				}
+			}
+	
+		#particle{
+				margin: 160px 0 0 110px;
+				box-shadow: 1px 1px 15px 7px rgb(4, 209, 250);
+			
+			}			
+			@keyframes particle {
+		
+				0% {
+					transform: translate(0, 0); 
+					opacity: 20;
+					visibility: visible;
+				}
+				60% {
+					transform: translate(220px, 200px);
+					opacity: 100;
+					visibility: visible;
+				}
+			
+				100% {
+					transform: translate(170px, 425px);
+					opacity: 0;
+					visibility: visible;
+				}
+				
+			}
+	 }
+	
+  }
+
+  @media  only screen 
+and (min-width : 360px)
+and (orientation: portrait)   {
+	.About {
+		height: 180vh;
+		padding-top: 50px;
+		.container {
+			width: 250px;
+			height: 700px;
+			font-size: 18px;
+			text-align:left;
+			padding: 10px 40px 40px 40px;
+			margin: 50px 0px 10px 25px;	
+			}
+			&:hover div {
+				&#particle {
+					animation: particle 6s ease;
+				}
+			}
+		img {
+
+			&#venezuela {
+					width: 220px;
+					margin: 150px 0 0 15px;
+				}
+			&#estonia{
+					width: 250px;
+					margin: 550px 0 0 120px;
+				}
+			}
+	
+		#particle{
+				margin: 160px 0 0 110px;
+				box-shadow: 1px 1px 15px 7px rgb(4, 209, 250);
+			
+			}			
+			@keyframes particle {
+		
+				0% {
+					transform: translate(0, 0); 
+					opacity: 20;
+					visibility: visible;
+				}
+				60% {
+					transform: translate(220px, 200px);
+					opacity: 100;
+					visibility: visible;
+				}
+			
+				100% {
+					transform: translate(170px, 425px);
+					opacity: 0;
+					visibility: visible;
+				}
+				
+			}
+	 }
+	
+  }
+
+@media  only screen 
+and (min-width : 380px) 
+and (orientation: portrait)   {
+	.About {
+		height: 130vh;
+		padding-top: 50px;
 		.container {
 			width: 245px;
 			height: 800px;
-			color: rgba(253, 252, 250, 0.812);
 			font-size: 20px;
 			text-align:left;
 			padding: 10px 40px 40px 40px;
-			margin: 50px 0px 10px 10px;	
+			margin: 50px 0px 10px 25px;	
 			}
 			&:hover div {
 				&#particle {
