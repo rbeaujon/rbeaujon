@@ -9,6 +9,9 @@
 		color: #ede8e400;
 		text-shadow: 5px 2px 7px rgba(197, 197, 197, 0.687);
 	}
+	img {
+		aspect-ratio: attr(width) / attr(height);
+	  }
 }
 .spinLoader {
 	border: 15px solid rgb(38, 206, 209);

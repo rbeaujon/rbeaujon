@@ -1,8 +1,12 @@
 import './About.scss'
-import venezuela from '../../assets/icons/venezuela.png';
-import estonia from '../../assets/icons/estonia.png';
+const venezuela = '/assets/icons/venezuela.png';
+const estonia = '/assets/icons/estonia.png';
+
 
 const About = () => {
+
+	const root = "http://rbeaujon.com";
+
 	return (
 		<div>
 			<div className="textBg">About</div>
@@ -15,9 +19,9 @@ const About = () => {
 				<p>My hobbies are dancing and photography.</p>	
 			</div>
 			
-			<img id="venezuela" src={venezuela} alt="Vnezuela"/>
+			<img id="venezuela" src={root + venezuela} alt="Vnezuela"/>
 			<div id="particle"></div>
-			<img id="estonia" src={estonia} alt="Estonia"/>
+			<img id="estonia" src={root + estonia} alt="Estonia"/>
 			
 		</div>
 

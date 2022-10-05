@@ -101,12 +101,14 @@
 	}
 	#picture img {
 		width: 300px;
+		height: auto;
 		margin-left: 800px;
 		margin-top: -170px;
 		border-radius: 50%;
 		@media  only screen 
 		and (min-width : 1800px){
 			width: 380px;
+			height: auto;
 			margin-left: 1300px;
 			margin-top: -200px;
 		}
@@ -130,6 +132,7 @@
 	}
 	#arrow img {
 		width: 1.5vw;
+		height: auto;
 		border-radius: 50%;
 		position: absolute;
 		margin: 145px 0 -20px 600px ;
@@ -145,6 +148,7 @@
 	}
 	#switch img {
 		width: 30px;
+		height: auto;
 		border-radius: 5%;
 		position: absolute;
 		margin: 0 0  0 127px;

@@ -8,25 +8,28 @@ import Services from "../Services/Services";
 import Contact from "../Contact/Contact";
 import Skills from "../Skills/Skills";
 import About from "../About/About";
-import me from '../../assets/pictures/me.png';
+
 // import arrow from '../../assets/icons/arrowBottom.png';
-import on from '../../assets/icons/on.png'
-import off from '../../assets/icons/off.png'
+const me = '/assets/pictures/me.png';
+const on = '/assets/icons/on.png'
+const off = '/assets/icons/off.png'
 
 function Home() {
   
   const [isLight, setIsLight] = useState({status:true});
 
+	const root = "http://rbeaujon.com";
+
   let styles = {
     class: "On",
-    switch: off,
+    switch: root + off,
   }
   if(isLight.status === true){
     setIsLight(styles)
   } else if (isLight.status === false) {
     styles = {
       class: "Off",
-      switch: on,
+      switch: root + on,
     }
     setIsLight(styles)
   }
@@ -40,11 +43,11 @@ function Home() {
         <div className="welcome">
           { welcome.map(letter  =>  <span className={letter === " " ? "spanEmpty" : ""}>{letter}</span> )} 
         </div>
-        <div id="picture"><img src={me} alt="Ricardo Beaujon"></img></div>
+        <div id="picture"><img src={root + me} alt="Ricardo Beaujon"></img></div>
         <div id="circle"></div>
         <div id="name">Ricardo Beaujon</div>
         <div id="title">Full-Stack Developer</div>  
-        <div id="switch"><img src={isLight.switch} onClick={() => isLight.switch === off ? setIsLight({status: false}) : setIsLight({status: true}) } alt="switch"></img></div> 
+        <div id="switch"><img src={isLight.switch} onClick={() => isLight.switch === root + off ? setIsLight({status: false}) : setIsLight({status: true}) } alt="switch"></img></div> 
         {/* <div id="arrow">
           <img src={arrow} alt="next section"  onClick={() => document.getElementById('about').scrollIntoView({behavior: 'smooth'})} />
         </div> */}

@@ -59,7 +59,7 @@
 	}
 	img {
 		width: 70px;
-		height:70px;
+		height: auto;
 		&:hover {
 			animation: icons 0.7s ease-out ;
 		}
