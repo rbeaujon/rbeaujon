@@ -54,8 +54,8 @@ function Home() {
       </div>
       <div className="About" id="about"> <About/> </div>
       <div className="Skills" id="skills"> <Skills/> </div>
-     {/*  <div className="Portfolio" id="portfolio"> <Portfolio/> </div>
-      <div className="Services" id="services"> <Services/> </div> */}
+      <div className="Portfolio" id="portfolio"> <Portfolio/> </div>
+     {/*  <div className="Services" id="services"> <Services/> </div> */}
       <div className="Contact" id="contact"> <Contact/> </div>
       <div className="Footer" id="footer"><Footer/></div>
     </div>

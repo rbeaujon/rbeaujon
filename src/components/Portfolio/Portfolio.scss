@@ -1,8 +1,139 @@
 .Portfolio {
 	position: relative;
 	width: 100vw;
-	height: 100vh;
+	height: 150vh;
 	padding-top: 80px;
+
+	.Folders {
+		padding: 100px;
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		gap: 25px;
+		&:hover .container {
+			filter: blur(3px) grayscale(20%) opacity(0.8) ;
+		}
+		
+		.container{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			box-shadow: 1px 1px 10px 0px rgb(130, 129, 128);
+			border: 3px solid rgb(145, 147, 147);
+			border-radius: 15px;
+			transition: all 0.8s ease;
+			transform-style: preserve-3d;
+			z-index: 0;
+
+			&:hover {
+				z-index: 1;
+				.front{backface-visibility: hidden;}
+				.back{backface-visibility:visible;}
+
+				&#matic {
+					transform: rotateY(180deg) scale(3, 2) translate(-70px, 50px);
+					filter: blur(0) grayscale(0);
+				}
+				&#brainbase {
+					transform: rotateY(180deg) scale(3, 2) translate(-50px, 50px);
+					filter: blur(0) grayscale(0);
+				}
+				&#nuestronorte {
+					transform: rotateY(180deg) scale(3, 2) translate(50px, 50px);
+					filter: blur(0) grayscale(0);
+				}
+				&#wordle {
+					transform: rotateY(180deg) scale(3, 2) translate(70px, 50px);
+					filter: blur(0) grayscale(0);
+				}
+				&#yolo {
+					transform: rotateY(180deg) scale(3, 2) translate(-70px, 0px);
+					filter: blur(0) grayscale(0);
+				}
+				&#sicca {
+					transform: rotateY(180deg) scale(3, 2) translate(-50px, 0px);
+					filter: blur(0) grayscale(0);
+				}
+				&#positium {
+					transform: rotateY(180deg) scale(3, 2) translate(50px, 0px);
+					filter: blur(0) grayscale(0);
+				}
+				&#jrbs2007 {
+					transform: rotateY(180deg) scale(3, 2) translate(70px, 0px);
+					filter: blur(0) grayscale(0);
+				}
+				&#perezbravo {
+					transform: rotateY(180deg) scale(3, 2) translate(-70px, -50px);
+					filter: blur(0) grayscale(0);
+				}
+				&#plasticos {
+					transform: rotateY(180deg) scale(3, 2) translate(-50px, -50px);
+					filter: blur(0) grayscale(0);
+				}
+
+
+				
+			}
+
+		}
+		.front {
+			position: absolute;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden; /* Safari */
+			img {
+				width: 200px;
+				height: 200px;
+				border-radius: 10px;
+			}		
+		}
+		.back {
+			position: absolute;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden; /* Safari */
+			transform: rotateY(180deg);	
+			padding: 10px;
+			background-color: rgb(255, 255, 255);
+			border-radius: 15px;
+			color: black;
+			.close {
+				color:rgb(255, 255, 255);
+				margin: -7px -7.2px 0 0 ;
+				background-color:  rgb(145, 147, 147);
+				font-size: 7px;
+				font-weight: 20px;
+				float: right;
+				padding: 2px;
+				border-radius: 0% 50% 0% 20%;
+			}
+			.containerBack{
+				height: 160px ;
+				p {
+					font-size: 7.5px;
+					font-weight:700;
+					text-align:left;
+					word-break: normal;
+					text-overflow: ellipsis;			
+					overflow: hidden;
+					max-width: 180px;
+				}
+			}
+	
+			a { 
+				text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+				text-decoration: none;
+				font-size: 10px;
+				color: rgb(145, 142, 142);
+				float: right;
+				&:hover {
+					text-shadow: 0px 2px 10px  rgb(2, 2, 2);
+					color: rgba(122, 117, 117, 0.806)
+				}
+			}
+
+	
+		}
+		
+
+	}
 }
 
 
@@ -15,29 +146,404 @@
 @media  only screen 
 and (min-width : 200px)
 and (orientation: portrait)   {
-	.Portfolio{
-		padding-top: 50px;
+
+	/***** Android Rules *******/
+	@supports not (-webkit-touch-callout: none) { 
+		.Portfolio{ //With 4 ROWS and stacking
+			padding-top: 80px;
+			height: 140vh;
+			.Folders {
+				padding: 50px 20px 0 30px;
+				grid-template-columns: auto auto;
+				gap: 10px;
+
+				.container{
+					width: 100px;
+					height: 100px;	
+					&:hover {
+
+						&#matic {
+							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
+						}
+						&#brainbase {
+							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
+						}
+						&#nuestronorte {
+							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
+						}
+						&#wordle {
+							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
+						}
+						&#yolo {
+							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
+						}
+						&#sicca {
+							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
+						}
+						&#positium {
+							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
+						}
+						&#jrbs2007 {
+							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
+						}
+						&#perezbravo {
+							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
+						}
+						&#plasticos {
+							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
+						}	
+					}
+				}
+			
+				.front {
+					img {
+						width: 100px;
+						height: 100px;
+						border-radius: 10px;
+					}		
+				}
+				.back {
+					padding: 7px;
+					backface-visibility: hidden;
+					border-radius: 10px;
+					.containerBack{
+						height:77px;
+						p {
+							font-size: 3.5px;
+							width: auto;
+						}
+					}
+					a { 
+						text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+						font-size: 5px;
+					}
+				}
+			}
+		}
 	}
-	
+	/***** ios Rules *******/
+	@supports (-webkit-touch-callout: none) {
+		.Portfolio{ // ONLY 1 ROW
+			padding-top: 80px;
+			height: 360vh;
+			.Folders {
+				padding: 50px 0px 0 90px;
+				grid-template-columns: auto ;
+				gap: 40px;
+
+				.container{
+					width: 225px;
+					height: 225px;	
+					&:hover {
+						-webkit-transform: rotateY(180deg) scale(1.2, 1.2);
+						transform: rotateY(180deg) scale(1.5, 1.2);
+					}
+				}
+			
+				.front {
+					img {
+						width: 225px;
+						height: 225px;
+						border-radius: 10px;
+					}		
+				}
+				.back {
+					padding: 10px;
+					.containerBack{
+						height: 180px ;
+						p {
+							font-size: 8px;
+							max-width: 200px;
+						}
+					}
+					a { 
+						text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	 }
   }
 
 @media  only screen 
   and (min-width : 360px)
   and (orientation: portrait)   {
-	  .Portfolio{
-		  padding-top: 50px;
-	  }
-	  
+
+	/***** Android Rules *******/
+	@supports not (-webkit-touch-callout: none) { 
+			.Portfolio{ //With 4 ROWS and stacking
+				padding-top: 50px;
+				height: 480vh;
+				.Folders {
+					padding: 50px 20px 0 10px;
+					grid-template-columns: auto auto auto;
+					gap: 10px;
+					&:hover .container {
+						filter: blur(3px) grayscale(20%) opacity(0.8) ;
+					}
+					.container{
+						width: 100px;
+						height: 100px;	
+						&:hover {
+							.front{backface-visibility: hidden;}
+							.back{backface-visibility:visible;}
+	
+							&#matic {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, 50px);
+								filter: blur(0) grayscale(0);
+							}
+							&#brainbase {
+								transform: rotateY(180deg) scale(3, 4) translate(0px, 50px);
+								filter: blur(0) grayscale(0);
+							}
+							&#nuestronorte {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 50px);
+								filter: blur(0) grayscale(0);
+							}
+							&#wordle {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, 20px);
+								filter: blur(0) grayscale(0);
+							}
+							&#yolo {
+								transform: rotateY(180deg) scale(3, 4) translate(0px, 20px);
+								filter: blur(0) grayscale(0);
+							}
+							&#sicca {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 20px);
+								filter: blur(0) grayscale(0);
+							}
+							&#positium {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, -10px);
+								filter: blur(0) grayscale(0);
+							}
+							&#jrbs2007 {
+								transform: rotateY(180deg) scale(3, 4) translate(0px, -10px);
+								filter: blur(0) grayscale(0);
+							}
+							&#perezbravo {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, -10px);
+								filter: blur(0) grayscale(0);
+							}
+							&#plasticos {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, -40px);
+								filter: blur(0) grayscale(0);
+							}
+	
+	
+							
+						}
+					}
+				
+					.front {
+						img {
+							width: 100px;
+							height: 100px;
+							border-radius: 10px;
+						}		
+					}
+					.back {
+						padding: 7px;
+						backface-visibility: hidden;
+						border-radius: 10px;
+						.containerBack{
+							height:77px;
+							p {
+								font-size: 3.5px;
+								width: auto;
+							}
+						}
+						a { 
+							text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+							font-size: 5px;
+						}
+					}
+				}
+			}
+	}
+	/***** ios Rules *******/
+	@supports (-webkit-touch-callout: none) {
+			.Portfolio{ // ONLY 1 ROW
+				padding-top: 80px;
+				height: 460vh;
+				.Folders {
+					padding: 50px 0px 0 70px;
+					grid-template-columns: auto ;
+					gap: 40px;
+	
+					.container{
+						width: 225px;
+						height: 225px;	
+						&:hover {
+							-webkit-transform: rotateY(180deg) scale(1.2, 1.2);
+							transform: rotateY(180deg) scale(1.5, 1.2);
+						}
+					}
+				
+					.front {
+						img {
+							width: 225px;
+							height: 225px;
+							border-radius: 10px;
+						}		
+					}
+					.back {
+						padding: 10px;
+						.containerBack{
+							height: 180px ;
+							p {
+								font-size: 8px;
+								max-width: 200px;
+							}
+						}
+						a { 
+							text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+							font-size: 10px;
+						}
+					}
+				}
+			}
 	}  
+}  
 
   @media  only screen 
   and (min-width : 380px)
   and (orientation: portrait)   {
-	  .Portfolio{
-		  padding-top: 50px;
-	  }
-	  
+	/***** Android Rules *******/
+	@supports not (-webkit-touch-callout: none) { 
+		.Portfolio{ //With 4 ROWS and stacking
+			padding-top: 50px;
+			height: 100vh;
+			.Folders {
+				padding: 50px 20px 0 10px;
+				grid-template-columns: auto auto auto;
+				gap: 10px;
+				&:hover .container {
+					filter: blur(3px) grayscale(20%) opacity(0.8) ;
+				}
+				.container{
+					width: 100px;
+					height: 100px;	
+					&:hover {
+						.front{backface-visibility: hidden;}
+						.back{backface-visibility:visible;}
+
+						&#matic {
+							transform: rotateY(180deg) scale(3, 4) translate(-40px, 50px);
+							filter: blur(0) grayscale(0);
+						}
+						&#brainbase {
+							transform: rotateY(180deg) scale(3, 4) translate(0px, 50px);
+							filter: blur(0) grayscale(0);
+						}
+						&#nuestronorte {
+							transform: rotateY(180deg) scale(3, 4) translate(40px, 50px);
+							filter: blur(0) grayscale(0);
+						}
+						&#wordle {
+							transform: rotateY(180deg) scale(3, 4) translate(-40px, 20px);
+							filter: blur(0) grayscale(0);
+						}
+						&#yolo {
+							transform: rotateY(180deg) scale(3, 4) translate(0px, 20px);
+							filter: blur(0) grayscale(0);
+						}
+						&#sicca {
+							transform: rotateY(180deg) scale(3, 4) translate(40px, 20px);
+							filter: blur(0) grayscale(0);
+						}
+						&#positium {
+							transform: rotateY(180deg) scale(3, 4) translate(-40px, -10px);
+							filter: blur(0) grayscale(0);
+						}
+						&#jrbs2007 {
+							transform: rotateY(180deg) scale(3, 4) translate(0px, -10px);
+							filter: blur(0) grayscale(0);
+						}
+						&#perezbravo {
+							transform: rotateY(180deg) scale(3, 4) translate(40px, -10px);
+							filter: blur(0) grayscale(0);
+						}
+						&#plasticos {
+							transform: rotateY(180deg) scale(3, 4) translate(-40px, -40px);
+							filter: blur(0) grayscale(0);
+						}
+
+
+						
+					}
+				}
+			
+				.front {
+					img {
+						width: 100px;
+						height: 100px;
+						border-radius: 10px;
+					}		
+				}
+				.back {
+					padding: 7px;
+					backface-visibility: hidden;
+					border-radius: 10px;
+					.containerBack{
+						height:77px;
+						p {
+							font-size: 3.6px;
+							width: auto;
+						}
+					}
+					a { 
+						text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+						font-size: 5px;
+					}
+				}
+			}
+		}
 	}
+	/***** ios Rules *******/
+	@supports (-webkit-touch-callout: none) {
+		.Portfolio{ // ONLY 1 ROW
+			padding-top: 80px;
+			height: 360vh;
+			.Folders {
+				padding: 50px 0px 0 90px;
+				grid-template-columns: auto ;
+				gap: 40px;
+
+				.container{
+					width: 225px;
+					height: 225px;	
+					&:hover {
+						-webkit-transform: rotateY(180deg) scale(1.2, 1.2);
+						transform: rotateY(180deg) scale(1.5, 1.2);
+					}
+				}
+			
+				.front {
+					img {
+						width: 225px;
+						height: 225px;
+						border-radius: 10px;
+					}		
+				}
+				.back {
+					padding: 10px;
+					.containerBack{
+						height: 180px ;
+						p {
+							font-size: 8px;
+							max-width: 200px;
+						}
+					}
+					a { 
+						text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+						font-size: 10px;
+					}
+				}
+			}
+		}
+	 }
+}
 
 /****** LANDSCAPE *************/
 
