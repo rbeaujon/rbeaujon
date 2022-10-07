@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './Portfolio.scss';
 import matic from '../../assets/images/matic/matic.jpeg';
@@ -13,17 +13,80 @@ import plasticos from '../../assets/images/plasticos/plasticos.png';
 import brainbase from '../../assets/images/brainbase/ppal.png';
 
 const Portfolio = () => {
+
+	const initial = {
+		matic:"toClose",
+		brainbase: "toClose",
+		nuestronorte: "toClose",
+		wordle: "toClose",
+		yolo: "toClose",
+		sicca: "toClose",
+		positium: "toClose",
+		jrbs2007: "toClose",
+		perezbravo: "toClose",
+		plasticos: "toClose"
+	}
+	const [isOpenOrClose, setisOpenOrClose] = useState(initial)
+
+	const handleIsOpen = (selection) => {	
+		
+		if(selection === "matic"){
+			const toc = isOpenOrClose.matic === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, matic:toc})
+		}
+		if(selection === "brainbase"){
+			const toc = isOpenOrClose.brainbase === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, brainbase: toc})
+		}
+		if(selection === "nuestronorte"){
+			const toc = isOpenOrClose.nuestronorte === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, nuestronorte:toc})
+		}
+		if(selection === "wordle"){
+			const toc = isOpenOrClose.wordle === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, wordle:toc})
+		}
+		if(selection === "yolo"){
+			const toc = isOpenOrClose.yolo === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, yolo:toc})
+		}
+		if(selection === "sicca"){
+			const toc = isOpenOrClose.sicca === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, sicca:toc})
+		}
+		if(selection === "positium"){
+			const toc = isOpenOrClose.positium === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, positium:toc})
+		}
+		if(selection === "jrbs2007"){
+			const toc = isOpenOrClose.jrbs2007 === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, jrbs2007:toc})
+		}
+		if(selection === "perezbravo"){
+			const toc = isOpenOrClose.perezbravo === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, perezbravo:toc})
+		}
+		if(selection === "plasticos"){
+			const toc = isOpenOrClose.plasticos === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, plasticos:toc})
+		}
+
+		
+	
+		
+	}
+
 	return (
 		<div>
 			<div className="textBg">Portfolio</div>
 			<span id="effect"></span>
 			<div className='Folders'>
-				<div className='container' id="matic" >
+				<div className={"container " +  isOpenOrClose.matic } id="matic" onClick={() => handleIsOpen("matic")}>
 					<div className='front'> 
 						<div><img id="matic" src={matic} alt="Matic"/></div>
 					</div>
 					<div className='back'> 			
-					{/* <div className='close'>X</div> */}
+					<div className='close' onClick={handleIsOpen}>X</div>
 						<div className='containerBack'>
 							<p>This project is an application created in React version 18.2.0 to show 3 logic functions (Fibonacci, Count Words, FizzBuzz) and one SPA that handles one CRUD API.</p>
 							<p>The App has unit testing for all modules with JEST using react-scripts: 5.0.1.</p>
@@ -34,11 +97,12 @@ const Portfolio = () => {
 						<a href="https://aistica.com/matic" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="brainbase" >
+				<div className={"container " +  isOpenOrClose.brainbase } id="brainbase" onClick={() => handleIsOpen("brainbase")} >
 					<div className='front'> 
 						<div><img id="brainbase" src={brainbase} alt="brainbase"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>App created in Angular version 14.1.0 to get the opening and closing prices of 5 cryptocurrencies symbols on a certain day. </p>
 							<p>API</p> 
@@ -50,11 +114,12 @@ const Portfolio = () => {
 						<a href="https://aistica.com/positium" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="nuestronorte" >
+				<div className={"container " +  isOpenOrClose.nuestronorte } id="nuestronorte" onClick={() => handleIsOpen("nuestronorte")} >
 					<div className='front'> 
 						<div><img id="nuestronorte" src={nuestronorte} alt="nuestronorte"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>It's created in HTML, Javascript, CSS  and with a back-end, on PHP and MySQL.</p>
 							<p>This one was working in an IntraNet to incentive the workers playing with the games on it</p> 
@@ -64,11 +129,12 @@ const Portfolio = () => {
 						<a href="https://rbeaujon/nuestronorteeslacima/" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="wordle">
+				<div className={"container " +  isOpenOrClose.wordle } id="wordle" onClick={() => handleIsOpen("wordle")}>
 					<div className='front'> 
 						<div><img id="wordle" src={wordle} alt="wordle"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>Game created from scratch by me.</p>
 							<p>It's based and inspired by the popular game Wordle</p> 
@@ -80,11 +146,12 @@ const Portfolio = () => {
 						<a href="https://aistica.com/wordle" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="yolo">
+				<div className={"container " +  isOpenOrClose.yolo } id="yolo" onClick={() => handleIsOpen("yolo")}>
 					<div className='front'> 
 						<div><img id="yolo" src={yolo} alt="yolo"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>Project with Front-End React-Redux and SASS.</p>
 							<p>responsive designs and Back-End (API's) on PHP and Mysql.</p>
@@ -94,11 +161,12 @@ const Portfolio = () => {
 						<a href="https://aistica.com/yologroup/" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="sicca">
+				<div className={"container " +  isOpenOrClose.sicca } id="sicca" onClick={() => handleIsOpen("sicca")}>
 					<div className='front'> 
 						<div><img id="sicca" src={sicca} alt="sicca"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>The next project is about the current weather in Estonia. It shows the temperature, feel like, the wind conditions, pressure, precipitation, visibility, UV rays, carbon dioxide, and Nitrogen dioxide in the atmosphere.</p>
 							<p>Front-End: React-Redux and SASS with responsive designs Back-End: RESTFUL API on PHP and Mysql.</p> 
@@ -107,11 +175,12 @@ const Portfolio = () => {
 						<a href="https://aistica.com/positium" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="positium">
+				<div className={"container " +  isOpenOrClose.positium } id="positium" onClick={() => handleIsOpen("positium")}>
 					<div className='front'> 
 						<div><img id="positium" src={positium} alt="positium"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>The next project is about the current weather in Estonia.</p>
 							<p>It shows the temperature, feel like, the wind conditions, pressure, precipitation, visibility, UV rays, carbon dioxide, and Nitrogen dioxide in the atmosphere.</p>
@@ -124,11 +193,12 @@ const Portfolio = () => {
 
 					</div>
 				</div>
-				<div className='container' id="jrbs2007">
+				<div className={"container " +  isOpenOrClose.jrbs2007 } id="jrbs2007" onClick={() => handleIsOpen("jrbs2007")}>
 					<div className='front'> 
 						<div><img id="jrbs2007" src={jrbs2007} alt="jrbs2007"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>Created in HTML, Javascript, CSS, with back-end, on PHP and MySQL.</p>
 							<p>This managed and controlled the client's subscriptions while it provided support and advisory services. </p> 
@@ -138,11 +208,12 @@ const Portfolio = () => {
 						<a href="http://jrbs2007.com/" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="perezbravo">
+				<div className={"container " +  isOpenOrClose.perezbravo } id="perezbravo" onClick={() => handleIsOpen("perezbravo")}>
 					<div className='front'> 
 						<div><img id="perezbravo" src={perezbravo} alt="perezbravo"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>Adapted with HTML, Javascript, CSS.</p>
 							<p>Business website for a Venezuelan law firm</p> 	
@@ -151,11 +222,12 @@ const Portfolio = () => {
 						<a href="https://perezbravo.com.ve" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
-				<div className='container' id="plasticos">
+				<div className={"container " +  isOpenOrClose.plasticos } id="plasticos" onClick={() => handleIsOpen("plasticos")}>
 					<div className='front'> 
 						<div><img id="plasticos" src={plasticos} alt="plasticos"/></div>
 					</div>
-					<div className='back'> 		
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
 						<div className='containerBack'>
 							<p>This used HTML, Javascript, CSS and with a back-end on PHP </p>
 							<p>This is a simple business website to have an internet presence. </p> 

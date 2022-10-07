@@ -9,9 +9,6 @@
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		gap: 25px;
-		&:hover .container {
-			filter: blur(3px) grayscale(20%) opacity(0.8) ;
-		}
 		
 		.container{
 			position: relative;
@@ -23,57 +20,296 @@
 			transition: all 0.8s ease;
 			transform-style: preserve-3d;
 			z-index: 0;
-
-			&:hover {
-				z-index: 1;
-				.front{backface-visibility: hidden;}
-				.back{backface-visibility:visible;}
-
-				&#matic {
-					transform: rotateY(180deg) scale(3, 2) translate(-70px, 50px);
-					filter: blur(0) grayscale(0);
+	
+		}
+		.toOpen {
+			z-index: 100;
+			animation-duration: 5s;
+			.front{backface-visibility: hidden;}
+			.back{backface-visibility:visible;}
+		
+			
+			&#matic {
+				animation: showBackMatic 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackMatic {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform:  rotateY(180deg) scale(3, 2) translate(-70px, 50px);
+					}
 				}
-				&#brainbase {
-					transform: rotateY(180deg) scale(3, 2) translate(-50px, 50px);
-					filter: blur(0) grayscale(0);
-				}
-				&#nuestronorte {
-					transform: rotateY(180deg) scale(3, 2) translate(50px, 50px);
-					filter: blur(0) grayscale(0);
-				}
-				&#wordle {
-					transform: rotateY(180deg) scale(3, 2) translate(70px, 50px);
-					filter: blur(0) grayscale(0);
-				}
-				&#yolo {
-					transform: rotateY(180deg) scale(3, 2) translate(-70px, 0px);
-					filter: blur(0) grayscale(0);
-				}
-				&#sicca {
-					transform: rotateY(180deg) scale(3, 2) translate(-50px, 0px);
-					filter: blur(0) grayscale(0);
-				}
-				&#positium {
-					transform: rotateY(180deg) scale(3, 2) translate(50px, 0px);
-					filter: blur(0) grayscale(0);
-				}
-				&#jrbs2007 {
-					transform: rotateY(180deg) scale(3, 2) translate(70px, 0px);
-					filter: blur(0) grayscale(0);
-				}
-				&#perezbravo {
-					transform: rotateY(180deg) scale(3, 2) translate(-70px, -50px);
-					filter: blur(0) grayscale(0);
-				}
-				&#plasticos {
-					transform: rotateY(180deg) scale(3, 2) translate(-50px, -50px);
-					filter: blur(0) grayscale(0);
-				}
-
-
-				
 			}
-
+			&#brainbase {
+				animation: showBackBrainbase 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackBrainbase {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(-50px, 50px);
+					}
+				}
+			}
+			&#nuestronorte {
+				animation: showBackNuestroNorte 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackNuestroNorte {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(50px, 50px);
+					}
+				}
+			}
+			&#wordle {
+				animation: showBackWordle 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackWordle {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(70px, 50px);
+					}
+				}
+			}
+			&#yolo {
+				animation: showBackYolo 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackYolo {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(-70px, 0px);
+					}
+				}
+			}
+			&#sicca {
+				animation: showBackSicca 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackSicca {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(-50px, 0px);
+					}
+				}
+			}
+			&#positium {
+				animation: showBackPositium 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackPositium {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(50px, 0px);
+					}
+				}
+			}
+			&#jrbs2007 {
+				animation: showBackJrbs2007 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackJrbs2007 {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(70px, 0px);
+					}
+				}
+			}
+			&#perezbravo {
+				animation: showBackPerezbravo 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBackPerezbravo {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(-70px, -50px);
+					}
+				}
+			}
+			&#plasticos {
+				animation: showBasePlasticos 0.4s linear;
+				animation-fill-mode: forwards;
+				@keyframes showBasePlasticos {
+					0% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					} 
+					100% {
+						transform: rotateY(180deg) scale(3, 2) translate(-50px, -50px);
+			}			
+		}
+	}
+		}
+		.toClose {
+			z-index: 1;
+			.front{backface-visibility: visible;}
+			.back{backface-visibility:hidden;}
+			&.container:hover .front {
+				animation: frontAnime 1s linear infinite;
+				animation-fill-mode: backwards;
+			}
+			@keyframes frontAnime {
+				0% {
+					box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+					border-radius: 20px;
+				}
+				50% {
+					box-shadow: 1px 1px 15px 2px rgb(6, 6, 6);
+					border-radius: 20px;
+				}
+				100% {
+					box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+					border-radius: 20px;
+				}
+			} 
+			&#matic {
+				animation: showFrontMatic 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontMatic {
+					0% {
+						transform:  rotateY(180deg) scale(3, 2) translate(-70px, 50px);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+					}
+				}
+			}
+			&#brainbase {
+				animation: showFrontBrainbase 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontBrainbase {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(-50px, 50px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#nuestronorte {
+				animation: showFrontNuestroNorte 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontNuestroNorte {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(50px, 50px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#wordle {
+				animation: showFrontWordle 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontWordle {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(70px, 50px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#yolo {
+				animation: showFrontYolo 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontYolo {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(-70px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#sicca {
+				animation: showFrontSicca 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontSicca {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(-50px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#positium {
+				animation: showFrontPositium 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontPositium {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(50px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#jrbs2007 {
+				animation: showFrontJrbs2007 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontJrbs2007 {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(70px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#perezbravo {
+				animation: showFrontPerezbravo 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontPerezbravo {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(-70px, -50px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}
+			&#plasticos {
+				animation: showFrontPlasticos 0.6s linear;
+				animation-fill-mode: forwards;
+				@keyframes showFrontPlasticos {
+					0% {
+						transform: rotateY(180deg) scale(3, 2) translate(-50px, -50px);
+						filter: blur(0) grayscale(0);
+					}
+					100% {
+						transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+						filter: blur(0) grayscale(0);
+					}
+				}
+			}	
 		}
 		.front {
 			position: absolute;
@@ -92,16 +328,16 @@
 			transform: rotateY(180deg);	
 			padding: 10px;
 			background-color: rgb(255, 255, 255);
-			border-radius: 15px;
+			border-radius: 10px;
 			color: black;
 			.close {
 				color:rgb(255, 255, 255);
-				margin: -7px -7.2px 0 0 ;
+				margin: -10px -10px 0 0 ;
 				background-color:  rgb(145, 147, 147);
 				font-size: 7px;
 				font-weight: 20px;
 				float: right;
-				padding: 2px;
+				padding: 4px;
 				border-radius: 0% 50% 0% 20%;
 			}
 			.containerBack{
@@ -113,7 +349,7 @@
 					word-break: normal;
 					text-overflow: ellipsis;			
 					overflow: hidden;
-					max-width: 180px;
+					max-width: 190px;
 				}
 			}
 	
@@ -159,41 +395,297 @@ and (orientation: portrait)   {
 
 				.container{
 					width: 100px;
-					height: 100px;	
-					&:hover {
-
-						&#matic {
-							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
-						}
-						&#brainbase {
-							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
-						}
-						&#nuestronorte {
-							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
-						}
-						&#wordle {
-							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
-						}
-						&#yolo {
-							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
-						}
-						&#sicca {
-							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
-						}
-						&#positium {
-							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
-						}
-						&#jrbs2007 {
-							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
-						}
-						&#perezbravo {
-							transform: rotateY(180deg) scale(2.5, 3) translate(-30px, 40px);
-						}
-						&#plasticos {
-							transform: rotateY(180deg) scale(2.5, 3) translate(25px, 40px);
-						}	
-					}
+					height: 100px;			
 				}
+				.toOpen {
+					z-index: 100;
+					animation-duration: 5s;
+					.front{backface-visibility: hidden;}
+					.back{backface-visibility:visible;}
+				
+					
+					&#matic {
+						animation: showBackMatic 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackMatic {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform:  rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+							}
+						}
+					}
+					&#brainbase {
+						animation: showBackBrainbase 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackBrainbase {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+							}
+						}
+					}
+					&#nuestronorte {
+						animation: showBackNuestroNorte 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackNuestroNorte {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+							}
+						}
+					}
+					&#wordle {
+						animation: showBackWordle 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackWordle {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+							}
+						}
+					}
+					&#yolo {
+						animation: showBackYolo 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackYolo {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+							}
+						}
+					}
+					&#sicca {
+						animation: showBackSicca 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackSicca {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+							}
+						}
+					}
+					&#positium {
+						animation: showBackPositium 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackPositium {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+							}
+						}
+					}
+					&#jrbs2007 {
+						animation: showBackJrbs2007 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackJrbs2007 {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+							}
+						}
+					}
+					&#perezbravo {
+						animation: showBackPerezbravo 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackPerezbravo {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+							}
+						}
+					}
+					&#plasticos {
+						animation: showBasePlasticos 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBasePlasticos {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+					}			
+				}
+			}
+				}
+				.toClose {
+					z-index: 1;
+					.front{backface-visibility: visible;}
+					.back{backface-visibility:hidden;}
+					&.container:hover .front {
+						animation: frontAnime 1s linear infinite;
+						animation-fill-mode: backwards;
+					}
+					@keyframes frontAnime {
+						0% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+						50% {
+							box-shadow: 1px 1px 15px 2px rgb(6, 6, 6);
+							border-radius: 20px;
+						}
+						100% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+					} 
+					&#matic {
+						animation: showFrontMatic 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontMatic {
+							0% {
+								transform:  rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							}
+						}
+					}
+					&#brainbase {
+						animation: showFrontBrainbase 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontBrainbase {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#nuestronorte {
+						animation: showFrontNuestroNorte 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontNuestroNorte {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#wordle {
+						animation: showFrontWordle 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontWordle {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3)translate(23px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#yolo {
+						animation: showFrontYolo 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontYolo {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#sicca {
+						animation: showFrontSicca 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontSicca {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#positium {
+						animation: showFrontPositium 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPositium {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3)  translate(-30px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#jrbs2007 {
+						animation: showFrontJrbs2007 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontJrbs2007 {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#perezbravo {
+						animation: showFrontPerezbravo 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPerezbravo {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(-30px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#plasticos {
+						animation: showFrontPlasticos 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPlasticos {
+							0% {
+								transform: rotateY(180deg) scale(2.7, 3) translate(23px, 35px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}	
+				}				
 			
 				.front {
 					img {
@@ -221,7 +713,6 @@ and (orientation: portrait)   {
 			}
 		}
 	}
-	/***** ios Rules *******/
 	@supports (-webkit-touch-callout: none) {
 		.Portfolio{ // ONLY 1 ROW
 			padding-top: 80px;
@@ -230,16 +721,60 @@ and (orientation: portrait)   {
 				padding: 50px 0px 0 90px;
 				grid-template-columns: auto ;
 				gap: 40px;
-
+	
 				.container{
-					width: 225px;
-					height: 225px;	
-					&:hover {
-						-webkit-transform: rotateY(180deg) scale(1.2, 1.2);
-						transform: rotateY(180deg) scale(1.5, 1.2);
+						width: 225px;
+						height: 225px;	
 					}
+				.toOpen {
+					
+					&#matic, &#brainbase, &#nuestronorte, 
+					&#wordle, &#yolo, &#sicca, &#positium,
+					&#jrbs2007, &#perezbravo, &#plasticos  {
+						animation: showBack 0.4s linear;
+						animation-fill-mode: forwards;
+						
+						@keyframes showBack {
+							0% {
+								transform: rotateY(0deg) scale(1, 1);
+							} 
+							100% {
+								transform:  rotateY(180deg) scale(1.5, 1.2);
+							}							}	
+					}		
 				}
-			
+				.toClose {
+					@keyframes frontAnime {
+						0% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+						50% {
+							box-shadow: 1px 1px 15px 2px rgb(6, 6, 6);
+							border-radius: 20px;
+						}
+						100% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+					} 
+
+					&#matic, &#brainbase, &#nuestronorte, 
+					&#wordle, &#yolo, &#sicca, &#positium,
+					&#jrbs2007, &#perezbravo, &#plasticos {
+						animation: showFront 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFront {
+							0% {
+								transform:  rotateY(180deg) scale(1.5, 1.2);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1);
+							}
+						}
+					}
+
+				}
 				.front {
 					img {
 						width: 225px;
@@ -260,11 +795,11 @@ and (orientation: portrait)   {
 						text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
 						font-size: 10px;
 					}
-				}
+				}		
 			}
 		}
-	 }
-  }
+	}
+}
 
 @media  only screen 
   and (min-width : 360px)
@@ -272,77 +807,317 @@ and (orientation: portrait)   {
 
 	/***** Android Rules *******/
 	@supports not (-webkit-touch-callout: none) { 
-			.Portfolio{ //With 4 ROWS and stacking
-				padding-top: 50px;
-				height: 480vh;
-				.Folders {
-					padding: 50px 20px 0 10px;
-					grid-template-columns: auto auto auto;
-					gap: 10px;
-					&:hover .container {
-						filter: blur(3px) grayscale(20%) opacity(0.8) ;
+		.Portfolio{ //With 4 ROWS and stacking
+			padding-top: 50px;
+			height: 80vh;
+			.Folders {
+				padding: 50px 20px 0 10px;
+				grid-template-columns: auto auto auto;
+				gap: 10px;
+
+				.container{
+					width: 100px;
+					height: 100px;	
+				}
+				.toOpen {
+					z-index: 100;
+					animation-duration: 5s;
+					.front{backface-visibility: hidden;}
+					.back{backface-visibility:visible;}
+				
+					
+					&#matic {
+						animation: showBackMatic 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackMatic {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform:  rotateY(180deg) scale(3, 4) translate(-40px, 40px);
+							}
+						}
 					}
-					.container{
-						width: 100px;
-						height: 100px;	
-						&:hover {
-							.front{backface-visibility: hidden;}
-							.back{backface-visibility:visible;}
-	
-							&#matic {
-								transform: rotateY(180deg) scale(3, 4) translate(-40px, 50px);
+					&#brainbase {
+						animation: showBackBrainbase 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackBrainbase {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(0px, 40px);
+							}
+						}
+					}
+					&#nuestronorte {
+						animation: showBackNuestroNorte 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackNuestroNorte {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 40px);
+							}
+						}
+					}
+					&#wordle {
+						animation: showBackWordle 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackWordle {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg)  scale(3, 4) translate(-40px, 20px);
+							}
+						}
+					}
+					&#yolo {
+						animation: showBackYolo 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackYolo {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 20px);
+							}
+						}
+					}
+					&#sicca {
+						animation: showBackSicca 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackSicca {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 20px);
+							}
+						}
+					}
+					&#positium {
+						animation: showBackPositium 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackPositium {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, 0px);
+							}
+						}
+					}
+					&#jrbs2007 {
+						animation: showBackJrbs2007 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackJrbs2007 {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 0px);
+							}
+						}
+					}
+					&#perezbravo {
+						animation: showBackPerezbravo 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackPerezbravo {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 0px);
+							}
+						}
+					}
+					&#plasticos {
+						animation: showBasePlasticos 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBasePlasticos {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, -30px);
+					}			
+				}
+			}
+				}
+				.toClose {
+					z-index: 1;
+					.front{backface-visibility: visible;}
+					.back{backface-visibility:hidden;}
+					&.container:hover .front {
+						animation: frontAnime 1s linear infinite;
+						animation-fill-mode: backwards;
+					}
+					@keyframes frontAnime {
+						0% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+						50% {
+							box-shadow: 1px 1px 15px 2px rgb(6, 6, 6);
+							border-radius: 20px;
+						}
+						100% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+					} 
+					&#matic {
+						animation: showFrontMatic 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontMatic {
+							0% {
+								transform:  rotateY(180deg) scale(3, 4) translate(-40px, 40px);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							}
+						}
+					}
+					&#brainbase {
+						animation: showFrontBrainbase 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontBrainbase {
+							0% {
+								transform: rotateY(180deg) scale(3, 4) translate(0px, 40px);
 								filter: blur(0) grayscale(0);
 							}
-							&#brainbase {
-								transform: rotateY(180deg) scale(3, 4) translate(0px, 50px);
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
 								filter: blur(0) grayscale(0);
 							}
-							&#nuestronorte {
-								transform: rotateY(180deg) scale(3, 4) translate(40px, 50px);
+						}
+					}
+					&#nuestronorte {
+						animation: showFrontNuestroNorte 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontNuestroNorte {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(40px, 40px);
 								filter: blur(0) grayscale(0);
 							}
-							&#wordle {
-								transform: rotateY(180deg) scale(3, 4) translate(-40px, 20px);
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
 								filter: blur(0) grayscale(0);
 							}
-							&#yolo {
-								transform: rotateY(180deg) scale(3, 4) translate(0px, 20px);
+						}
+					}
+					&#wordle {
+						animation: showFrontWordle 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontWordle {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(-40px, 20px);
 								filter: blur(0) grayscale(0);
 							}
-							&#sicca {
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#yolo {
+						animation: showFrontYolo 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontYolo {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 20px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#sicca {
+						animation: showFrontSicca 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontSicca {
+							0% {
 								transform: rotateY(180deg) scale(3, 4) translate(40px, 20px);
 								filter: blur(0) grayscale(0);
 							}
-							&#positium {
-								transform: rotateY(180deg) scale(3, 4) translate(-40px, -10px);
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
 								filter: blur(0) grayscale(0);
 							}
-							&#jrbs2007 {
-								transform: rotateY(180deg) scale(3, 4) translate(0px, -10px);
-								filter: blur(0) grayscale(0);
-							}
-							&#perezbravo {
-								transform: rotateY(180deg) scale(3, 4) translate(40px, -10px);
-								filter: blur(0) grayscale(0);
-							}
-							&#plasticos {
-								transform: rotateY(180deg) scale(3, 4) translate(-40px, -40px);
-								filter: blur(0) grayscale(0);
-							}
-	
-	
-							
 						}
 					}
-				
-					.front {
+					&#positium {
+						animation: showFrontPositium 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPositium {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(-40px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#jrbs2007 {
+						animation: showFrontJrbs2007 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontJrbs2007 {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#perezbravo {
+						animation: showFrontPerezbravo 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPerezbravo {
+							0% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#plasticos {
+						animation: showFrontPlasticos 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPlasticos {
+							0% {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, -30px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}	
+				}				
+			
+
+				.front {
 						img {
 							width: 100px;
 							height: 100px;
 							border-radius: 10px;
 						}		
-					}
-					.back {
+				}
+				.back {
 						padding: 7px;
 						backface-visibility: hidden;
 						border-radius: 10px;
@@ -357,9 +1132,9 @@ and (orientation: portrait)   {
 							text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
 							font-size: 5px;
 						}
-					}
 				}
 			}
+		}
 	}
 	/***** ios Rules *******/
 	@supports (-webkit-touch-callout: none) {
@@ -374,12 +1149,57 @@ and (orientation: portrait)   {
 					.container{
 						width: 225px;
 						height: 225px;	
-						&:hover {
-							-webkit-transform: rotateY(180deg) scale(1.2, 1.2);
-							transform: rotateY(180deg) scale(1.5, 1.2);
-						}
 					}
-				
+					.toOpen {
+					
+						&#matic, &#brainbase, &#nuestronorte, 
+						&#wordle, &#yolo, &#sicca, &#positium,
+						&#jrbs2007, &#perezbravo, &#plasticos  {
+							animation: showBack 0.4s linear;
+							animation-fill-mode: forwards;
+						
+							@keyframes showBack {
+								0% {
+									transform: rotateY(0deg) scale(1, 1);
+								} 
+								100% {
+									transform:  rotateY(180deg) scale(1.5, 1.2);
+								}
+							}	
+						}		
+					}
+					.toClose {
+						@keyframes frontAnime {
+							0% {
+								box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+								border-radius: 20px;
+							}
+							50% {
+								box-shadow: 1px 1px 15px 2px rgb(6, 6, 6);
+								border-radius: 20px;
+							}
+							100% {
+								box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+								border-radius: 20px;
+							}
+						} 
+
+						&#matic, &#brainbase, &#nuestronorte, 
+						&#wordle, &#yolo, &#sicca, &#positium,
+						&#jrbs2007, &#perezbravo, &#plasticos {
+							animation: showFront 0.6s linear;
+							animation-fill-mode: forwards;
+							@keyframes showFront {
+								0% {
+									transform:  rotateY(180deg) scale(1.5, 1.2);
+								}
+								100% {
+									transform: rotateY(0deg) scale(1, 1);
+								}
+							}
+						}
+
+					}
 					.front {
 						img {
 							width: 225px;
@@ -413,89 +1233,328 @@ and (orientation: portrait)   {
 	@supports not (-webkit-touch-callout: none) { 
 		.Portfolio{ //With 4 ROWS and stacking
 			padding-top: 50px;
-			height: 100vh;
+			height: 80vh;
 			.Folders {
-				padding: 50px 20px 0 10px;
+				padding: 60px 30px 0 30px;
 				grid-template-columns: auto auto auto;
 				gap: 10px;
-				&:hover .container {
-					filter: blur(3px) grayscale(20%) opacity(0.8) ;
-				}
+
 				.container{
 					width: 100px;
 					height: 100px;	
-					&:hover {
-						.front{backface-visibility: hidden;}
-						.back{backface-visibility:visible;}
-
-						&#matic {
-							transform: rotateY(180deg) scale(3, 4) translate(-40px, 50px);
-							filter: blur(0) grayscale(0);
-						}
-						&#brainbase {
-							transform: rotateY(180deg) scale(3, 4) translate(0px, 50px);
-							filter: blur(0) grayscale(0);
-						}
-						&#nuestronorte {
-							transform: rotateY(180deg) scale(3, 4) translate(40px, 50px);
-							filter: blur(0) grayscale(0);
-						}
-						&#wordle {
-							transform: rotateY(180deg) scale(3, 4) translate(-40px, 20px);
-							filter: blur(0) grayscale(0);
-						}
-						&#yolo {
-							transform: rotateY(180deg) scale(3, 4) translate(0px, 20px);
-							filter: blur(0) grayscale(0);
-						}
-						&#sicca {
-							transform: rotateY(180deg) scale(3, 4) translate(40px, 20px);
-							filter: blur(0) grayscale(0);
-						}
-						&#positium {
-							transform: rotateY(180deg) scale(3, 4) translate(-40px, -10px);
-							filter: blur(0) grayscale(0);
-						}
-						&#jrbs2007 {
-							transform: rotateY(180deg) scale(3, 4) translate(0px, -10px);
-							filter: blur(0) grayscale(0);
-						}
-						&#perezbravo {
-							transform: rotateY(180deg) scale(3, 4) translate(40px, -10px);
-							filter: blur(0) grayscale(0);
-						}
-						&#plasticos {
-							transform: rotateY(180deg) scale(3, 4) translate(-40px, -40px);
-							filter: blur(0) grayscale(0);
-						}
-
-
-						
-					}
 				}
-			
+				.toOpen {
+					z-index: 100;
+					animation-duration: 5s;
+					.front{backface-visibility: hidden;}
+					.back{backface-visibility:visible;}
+				
+					
+					&#matic {
+						animation: showBackMatic 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackMatic {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform:  rotateY(180deg) scale(3, 4) translate(-40px, 40px);
+							}
+						}
+					}
+					&#brainbase {
+						animation: showBackBrainbase 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackBrainbase {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(0px, 40px);
+							}
+						}
+					}
+					&#nuestronorte {
+						animation: showBackNuestroNorte 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackNuestroNorte {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 40px);
+							}
+						}
+					}
+					&#wordle {
+						animation: showBackWordle 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackWordle {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg)  scale(3, 4) translate(-40px, 20px);
+							}
+						}
+					}
+					&#yolo {
+						animation: showBackYolo 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackYolo {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 20px);
+							}
+						}
+					}
+					&#sicca {
+						animation: showBackSicca 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackSicca {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 20px);
+							}
+						}
+					}
+					&#positium {
+						animation: showBackPositium 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackPositium {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, 0px);
+							}
+						}
+					}
+					&#jrbs2007 {
+						animation: showBackJrbs2007 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackJrbs2007 {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 0px);
+							}
+						}
+					}
+					&#perezbravo {
+						animation: showBackPerezbravo 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBackPerezbravo {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 0px);
+							}
+						}
+					}
+					&#plasticos {
+						animation: showBasePlasticos 0.4s linear;
+						animation-fill-mode: forwards;
+						@keyframes showBasePlasticos {
+							0% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							} 
+							100% {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, -30px);
+					}			
+				}
+			}
+				}
+				.toClose {
+					z-index: 1;
+					.front{backface-visibility: visible;}
+					.back{backface-visibility:hidden;}
+					&.container:hover .front {
+						animation: frontAnime 1s linear infinite;
+						animation-fill-mode: backwards;
+					}
+					@keyframes frontAnime {
+						0% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+						50% {
+							box-shadow: 1px 1px 15px 2px rgb(6, 6, 6);
+							border-radius: 20px;
+						}
+						100% {
+							box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+							border-radius: 20px;
+						}
+					} 
+					&#matic {
+						animation: showFrontMatic 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontMatic {
+							0% {
+								transform:  rotateY(180deg) scale(3, 4) translate(-40px, 40px);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+							}
+						}
+					}
+					&#brainbase {
+						animation: showFrontBrainbase 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontBrainbase {
+							0% {
+								transform: rotateY(180deg) scale(3, 4) translate(0px, 40px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#nuestronorte {
+						animation: showFrontNuestroNorte 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontNuestroNorte {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(40px, 40px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#wordle {
+						animation: showFrontWordle 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontWordle {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(-40px, 20px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#yolo {
+						animation: showFrontYolo 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontYolo {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 20px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#sicca {
+						animation: showFrontSicca 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontSicca {
+							0% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 20px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#positium {
+						animation: showFrontPositium 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPositium {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(-40px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#jrbs2007 {
+						animation: showFrontJrbs2007 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontJrbs2007 {
+							0% {
+								transform: rotateY(180deg)  scale(3, 4) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#perezbravo {
+						animation: showFrontPerezbravo 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPerezbravo {
+							0% {
+								transform: rotateY(180deg) scale(3, 4) translate(40px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}
+					&#plasticos {
+						animation: showFrontPlasticos 0.6s linear;
+						animation-fill-mode: forwards;
+						@keyframes showFrontPlasticos {
+							0% {
+								transform: rotateY(180deg) scale(3, 4) translate(-40px, -30px);
+								filter: blur(0) grayscale(0);
+							}
+							100% {
+								transform: rotateY(0deg) scale(1, 1) translate(0px, 0px);
+								filter: blur(0) grayscale(0);
+							}
+						}
+					}	
+				}				
+	
 				.front {
-					img {
-						width: 100px;
-						height: 100px;
-						border-radius: 10px;
-					}		
+						img {
+							width: 100px;
+							height: 100px;
+							border-radius: 10px;
+						}		
 				}
 				.back {
-					padding: 7px;
-					backface-visibility: hidden;
-					border-radius: 10px;
-					.containerBack{
-						height:77px;
-						p {
-							font-size: 3.6px;
-							width: auto;
+						padding: 7px;
+						backface-visibility: hidden;
+						border-radius: 10px;
+						.containerBack{
+							height:77px;
+							p {
+								font-size: 3.5px;
+								width: auto;
+							}
 						}
-					}
-					a { 
-						text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
-						font-size: 5px;
-					}
+						a { 
+							text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+							font-size: 5px;
+						}
 				}
 			}
 		}
@@ -503,46 +1562,91 @@ and (orientation: portrait)   {
 	/***** ios Rules *******/
 	@supports (-webkit-touch-callout: none) {
 		.Portfolio{ // ONLY 1 ROW
-			padding-top: 80px;
-			height: 360vh;
-			.Folders {
-				padding: 50px 0px 0 90px;
-				grid-template-columns: auto ;
-				gap: 40px;
-
-				.container{
-					width: 225px;
-					height: 225px;	
-					&:hover {
-						-webkit-transform: rotateY(180deg) scale(1.2, 1.2);
-						transform: rotateY(180deg) scale(1.5, 1.2);
-					}
-				}
-			
-				.front {
-					img {
+				padding-top: 80px;
+				height: 360vh;
+				.Folders {
+					padding: 50px 0px 0 90px;
+					grid-template-columns: auto ;
+					gap: 40px;
+	
+					.container{
 						width: 225px;
-						height: 225px;
-						border-radius: 10px;
-					}		
-				}
-				.back {
-					padding: 10px;
-					.containerBack{
-						height: 180px ;
-						p {
-							font-size: 8px;
-							max-width: 200px;
+						height: 225px;	
+					}
+					.toOpen {
+					
+						&#matic, &#brainbase, &#nuestronorte, 
+						&#wordle, &#yolo, &#sicca, &#positium,
+						&#jrbs2007, &#perezbravo, &#plasticos  {
+							animation: showBack 0.4s linear;
+							animation-fill-mode: forwards;
+						
+							@keyframes showBack {
+								0% {
+									transform: rotateY(0deg) scale(1, 1);
+								} 
+								100% {
+									transform:  rotateY(180deg) scale(1.5, 1.2);
+								}
+							}	
+						}		
+					}
+					.toClose {
+						@keyframes frontAnime {
+							0% {
+								box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+								border-radius: 20px;
+							}
+							50% {
+								box-shadow: 1px 1px 15px 2px rgb(6, 6, 6);
+								border-radius: 20px;
+							}
+							100% {
+								box-shadow: 1px 1px 15px 2px rgb(5, 160, 216);
+								border-radius: 20px;
+							}
+						} 
+
+						&#matic, &#brainbase, &#nuestronorte, 
+						&#wordle, &#yolo, &#sicca, &#positium,
+						&#jrbs2007, &#perezbravo, &#plasticos {
+							animation: showFront 0.6s linear;
+							animation-fill-mode: forwards;
+							@keyframes showFront {
+								0% {
+									transform:  rotateY(180deg) scale(1.5, 1.2);
+								}
+								100% {
+									transform: rotateY(0deg) scale(1, 1);
+								}
+							}
+						}
+
+					}
+					.front {
+						img {
+							width: 225px;
+							height: 225px;
+							border-radius: 10px;
+						}		
+					}
+					.back {
+						padding: 10px;
+						.containerBack{
+							height: 180px ;
+							p {
+								font-size: 8px;
+								max-width: 200px;
+							}
+						}
+						a { 
+							text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
+							font-size: 10px;
 						}
 					}
-					a { 
-						text-shadow: 0px 2px 5px  rgba(4, 4, 4, 0.399);
-						font-size: 10px;
-					}
 				}
-			}
 		}
-	 }
+	}  
 }
 
 /****** LANDSCAPE *************/

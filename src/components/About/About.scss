@@ -263,15 +263,15 @@ and (orientation: portrait)   {
 and (min-width : 380px) 
 and (orientation: portrait)   {
 	.About {
-		height: 130vh;
+		height: 140vh;
 		padding-top: 50px;
 		.container {
 			width: 245px;
-			height: 800px;
+			height: 880px;
 			font-size: 20px;
 			text-align:left;
 			padding: 10px 40px 40px 40px;
-			margin: 50px 0px 10px 25px;	
+			margin: 50px 0px 10px 45px;	
 			}
 			&:hover div {
 				&#particle {
