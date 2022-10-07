@@ -9,8 +9,6 @@
 		font-size: 1.5vw;
 		text-align: justify;
 		margin: -7vh 0 0 0vw;	
-		background: rgba(102, 102, 104, 0.404);
-		box-shadow: 0px 0px 20px 0px #feffff64;;	
 	}
 	
 	#experience {
@@ -46,18 +44,22 @@
 	}
 	#effect { 
 		background: rgba(135, 135, 137, 0.898);
-		margin: -140px 0 0 -5vw;
+		margin: -120px 0 0 -5vw;
 		border-radius: 50%;
 		border-right: 1px solid;
 		box-shadow: 0px 0px 30px 10px rgb(4, 209, 250);
 		animation: bg 2s ease-out infinite alternate ;
 		animation-delay: 1s;
 		animation-fill-mode: forwards;
+		@media  only screen 
+		and (min-width : 1800px){
+			margin: -170px 0 0 -3.5vw;
+		}
 
 	}
 	img {
 		width: 70px;
-		height:70px;
+		height: auto;
 		&:hover {
 			animation: icons 0.7s ease-out ;
 		}
@@ -87,7 +89,22 @@
 	}
 }
 
+.On {
+	.Skills span {
+		color: rgb(255, 255, 255);
+		text-shadow: 1px 1px 2px rgb(11, 11, 11);
+	}
+}
 
+.Off {
+	.Skills span {
+		color: rgb(249, 249, 249);
+		text-shadow: 1px 1px 2px rgb(255, 255, 255);
+		// background: rgba(102, 102, 104, 0.404);
+		// box-shadow: 0px 0px 20px 0px #feffff64;;	
+	}
+
+}
 
 /* RESPONSIVE DESIGN FOR MOBILE */
 
@@ -96,15 +113,154 @@
 
 /****** PORTRAIT *************/
 @media  only screen 
-and (min-width : 320px)
-and (max-width : 568px) 
+and (min-width : 200px)
+and (orientation: portrait)   {
+	.Skills {
+		height: 170vh;
+		padding-top: 50px;
+
+		span {
+			font-size: 6vw;
+			margin: -50px 0 0px 0px;	
+		}
+		#experience {
+			padding: 0 15px;
+			margin: 100px 0 100px 0vw;
+			div {
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				row-gap: 10px;
+			}		
+		}
+		#handsOn {
+			padding: 0 20px;
+			margin: 70px 0 0 0vw;
+			div {
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				row-gap: 10px;
+			}	
+		}
+		#others {
+			padding: 0 20px;
+			margin: 70px 0 0 0vw;
+			div {
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				row-gap: 10px;
+			}	
+		}
+		#network {
+			padding: 0 20px;
+			margin: 70px 0 0 0vw;
+			display: block;
+			margin: 70px 0 0 0vw;
+		}
+		#effect { 
+			background: rgba(135, 135, 137, 0.898);
+			margin: -130px 0 0 -5px;
+			border-radius: 50%;
+			border-right: 1px solid;
+			box-shadow: 0px 0px 35px 7px rgb(4, 209, 250);
+			animation: bg 2s ease-out infinite alternate ;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
+	
+		}
+	}
+	@keyframes bg {
+		
+		0% {
+			transform: translate(0, 0); 
+		}
+		100% {
+			transform: translate(200px, 0px);
+			opacity: 0;
+		}
+		
+	}
+	
+  }
+
+@media  only screen 
+  and (min-width : 360px)
+  and (orientation: portrait)   {
+	  .Skills {
+		  height: 145vh;
+		  padding-top: 60px;
+  
+		  span {
+			  font-size: 5.5vw;
+			  margin: -50px 0 50px 0px;	
+		  }
+		  #experience {
+			  padding: 0 15px;
+			  margin: 90px 0 90px 0vw;
+			  div {
+				  display: grid;
+				  grid-template-columns: auto auto auto auto;
+				  row-gap: 10px;
+			  }		
+		  }
+		  #handsOn {
+			  padding: 0 20px;
+			  margin: 70px 0 0 0vw;
+			  div {
+				  display: grid;
+				  grid-template-columns: auto auto auto auto;
+				  row-gap: 10px;
+			  }	
+		  }
+		  #others {
+			  padding: 0 20px;
+			  margin: 70px 0 0 0vw;
+			  div {
+				  display: grid;
+				  grid-template-columns: auto auto auto auto;
+				  row-gap: 10px;
+			  }	
+		  }
+		  #network {
+			  padding: 0 20px;
+			  margin: 70px 0 0 0vw;
+			  display: block;
+			  margin: 70px 0 0 0vw;
+		  }
+		  #effect { 
+			  background: rgba(135, 135, 137, 0.898);
+			  margin: -120px 0 0 -5px;
+			  border-radius: 50%;
+			  border-right: 1px solid;
+			  box-shadow: 0px 0px 35px 7px rgb(4, 209, 250);
+			  animation: bg 2s ease-out infinite alternate ;
+			  animation-delay: 1s;
+			  animation-fill-mode: forwards;
+	  
+		  }
+	  }
+	  @keyframes bg {
+		  
+		  0% {
+			  transform: translate(0, 0); 
+		  }
+		  100% {
+			  transform: translate(200px, 0px);
+			  opacity: 0;
+		  }
+		  
+	  }
+	  
+	}  
+
+@media  only screen 
+and (min-width : 380px) 
 and (orientation: portrait)   {
 	.Skills {
 		height: 110vh;
-		padding-top: 80px;
+		padding-top: 50px;
 
 		span {
-			font-size: 4vw;
+			font-size: 5vw;
 			margin: -40px 0 0 0px;	
 		}
 		#experience {

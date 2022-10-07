@@ -1,16 +1,17 @@
 .Main {
 	position: relative;
 	width: 100vw;
-	background: #000000;
-	color: rgba(255, 255, 255, 0.748);
 	font-family: Hack, monospace;
 	left: -1vw;
 	.textBg {
 		font-size: 50px;
 		margin-left: 2vw;
-		color: #cc600200;
+		color: #ede8e400;
 		text-shadow: 5px 2px 7px rgba(197, 197, 197, 0.687);
 	}
+	img {
+		aspect-ratio: attr(width) / attr(height);
+	  }
 }
 .spinLoader {
 	border: 15px solid rgb(38, 206, 209);
@@ -39,6 +40,25 @@
 		}
 	  }
 }
+
+.On {
+	background: #fff;
+	color: rgba(53, 52, 52, 0.831);
+	.textBg { 
+		color: #fdfdfdd3;
+		text-shadow: 5px 2px 7px rgb(16, 15, 15);
+	}
+}
+
+.Off {
+	background: #000;
+	color: rgba(255, 255, 255, 0.748);
+	.textBg { 
+		color: #000000cd;
+		text-shadow: 2px 1px 3px rgb(255, 255, 255);
+	}
+}
+
 
 /* RESPONSIVE DESIGN FOR MOBILE */
 

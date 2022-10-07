@@ -1,29 +1,32 @@
 import './Skills.scss';
-import react  from '../../assets/icons/react.svg';
-import redux  from '../../assets/icons/redux.svg'
-import ts  from '../../assets/icons/ts.svg'
-import js  from '../../assets/icons/js.svg'
-import css3  from '../../assets/icons/css3.svg'
-import sass  from '../../assets/icons/sass.svg'
-import html5  from '../../assets/icons/html5.svg'
-import graphql  from '../../assets/icons/graphql.svg'
-import mysql  from '../../assets/icons/mysql.svg'
-import sql  from '../../assets/icons/sql.png'
-import php  from '../../assets/icons/php.png'
-import angularjs  from '../../assets/icons/angularjs.svg'
-import docker  from '../../assets/icons/docker.svg'
-import postgresql  from '../../assets/icons/postgresql.png'
-import figma  from '../../assets/icons/figma.svg'
-import git  from '../../assets/icons/git.svg'
-import confluence  from '../../assets/icons/confluence.svg'
-import slack  from '../../assets/icons/slack.svg'
-import jira  from '../../assets/icons/jira.svg'
+
+const react = '/assets/icons/react.svg';
+const redux = '/assets/icons/redux.svg'
+const ts = '/assets/icons/ts.svg'
+const js = '/assets/icons/js.svg'
+const css3 = '/assets/icons/css3.svg'
+const sass = '/assets/icons/sass.svg'
+const html5 = '/assets/icons/html5.svg'
+const graphql = '/assets/icons/graphql.svg'
+const mysql = '/assets/icons/mysql.svg'
+const sql = '/assets/icons/sql.png'
+const php = '/assets/icons/php.png'
+const angularjs = '/assets/icons/angularjs.svg'
+const docker = '/assets/icons/docker.svg'
+const postgresql = '/assets/icons/postgresql.png'
+const figma = '/assets/icons/figma.svg'
+const git = '/assets/icons/git.svg'
+const confluence = '/assets/icons/confluence.svg'
+const slack = '/assets/icons/slack.svg'
+const jira = '/assets/icons/jira.svg'
 
 
 
 
 
 const Skills = () => {
+	
+	const root = "http://rbeaujon.com";
 	return (
 		<div>
 			<div className="textBg">Skills</div>
@@ -32,35 +35,35 @@ const Skills = () => {
 					<span>Working experience</span>
 					<span id="effect"></span>
 					<div>
-					<img src={react} alt=""/>
-						<img src={redux} alt=""/>
-						<img src={ts} alt="" />
-						<img src={js} alt=""/>
-						<img src={css3} alt=""/>
-						<img src={sass} alt=""/>
-						<img src={html5} alt=""/>
-						<img src={graphql} alt=""/>
-						<img src={mysql} alt=""/>
-						<img src={sql} alt=""/>
-						<img src={php} alt=""/>
+					<img src={root + react} alt=""/>
+						<img src={root + redux} alt=""/>
+						<img src={root + ts} alt="" />
+						<img src={root + js} alt=""/>
+						<img src={root + css3} alt=""/>
+						<img src={root + sass} alt=""/>
+						<img src={root + html5} alt=""/>
+						<img src={root + graphql} alt=""/>
+						<img src={root + mysql} alt=""/>
+						<img src={root + sql} alt=""/>
+						<img src={root + php} alt=""/>
 					</div>
 				</div>
 				<div id="handsOn">
 					<span>Hands-On Experience</span> 
 					<div>
-						<img src={angularjs} alt="" />
-						<img src={docker} alt="" />
-						<img src={postgresql} alt="" />
+						<img src={root + angularjs} alt="" />
+						<img src={root + docker} alt="" />
+						<img src={root + postgresql} alt="" />
 					</div>
 				</div>
 				<div id="others">
 					<span>Others</span> 
 					<div>
-						<img src={figma} alt="" />
-						<img src={git} alt=""  />
-						<img src={confluence} alt="" />
-						<img src={slack} alt=""  />
-						<img src={jira} alt=""  />
+						<img src={root + figma} alt="" />
+						<img src={root + git} alt=""  />
+						<img src={root + confluence} alt="" />
+						<img src={root + slack} alt=""  />
+						<img src={root + jira} alt=""  />
 					</div>
 				</div>
 				<div id="network">
