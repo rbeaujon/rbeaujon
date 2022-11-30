@@ -25,18 +25,22 @@
 <img src="/assets/icons/redux.svg" width="50px" height="50px">
 <img src="/assets/icons/ts.svg" width="50px" height="50px">
 <img src="/assets/icons/js.svg" width="50px" height="50px">
+<img src="/assets/icons/php.png" width="50px" height="50px">
 <img src="/assets/icons/css3.svg" width="50px" height="50px">
 <img src="/assets/icons/sass.svg" width="50px" height="50px">
 <img src="/assets/icons/html5.svg" width="50px" height="50px">
 <img src="/assets/icons/graphql.svg" width="50px" height="50px">
 <img src="/assets/icons/mysql.svg" width="50px" height="50px">
 <img src="/assets/icons/sql.png" width="50px" height="50px">
-<img src="/assets/icons/php.png" width="50px" height="50px">
 </div>
 
 ## Hands-On Experience
 <div float="left">
 <img src="/assets/icons/angularjs.svg" width="50px" height="50px">
+<img src="/assets/icons/aws.png" width="50px" height="50px">
+<img src="/assets/icons/node.png" width="50px" height="50px">
+<img src="/assets/icons/python.png" width="50px" height="50px">
+<img src="/assets/icons/django.png" width="50px" height="50px">
 <img src="/assets/icons/docker.svg" width="50px" height="50px">
 <img src="/assets/icons/postgresql.png" width="50px" height="50px">
 </div>
@@ -44,7 +48,7 @@
 ## Others
 <div float="left">
 <img src="/assets/icons/figma.svg" width="50px" height="50px">
-<img src="/assets/icons/git.svg" width="50px" height="50px">
+<img src="/assets/icons/github.png" width="50px" height="50px">
 <img src="/assets/icons/confluence.svg" width="50px" height="50px">
 <img src="/assets/icons/slack.svg" width="50px" height="50px">
 <img src="/assets/icons/jira.svg" width="50px" height="50px">

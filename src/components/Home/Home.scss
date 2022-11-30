@@ -121,7 +121,7 @@
 		height: 300px;
 		visibility: hidden;
 		animation-fill-mode: forwards;
-		box-shadow: 0.1px 0.5px 25px 0 rgb(154, 160, 160);
+		box-shadow: 0.1px 0.5px 1px 0 rgb(154, 160, 160);
 		@media  only screen 
 		and (min-width : 1800px){
 			width: 380px;
@@ -146,24 +146,25 @@
 			margin: 160px 0 -20px 900px ;
 		}
 	}
-	#switch img {
-		width: 30px;
-		height: auto;
-		border-radius: 5%;
-		position: absolute;
-		margin: 0 0  0 127px;
-		filter: opacity(0);
-		animation: switch 1.5s linear  ;
-		animation-fill-mode: forwards;
-		animation-delay: 6s;
-		
-		@media  only screen 
-		and (min-width : 1800px){
-			margin: 0 0  0 190px;
+
+	#switch  {
+		margin-left: 10vw;
+		img {
+			width: 30px;
+			height: auto;
+			border-radius: 5%;
+			position: absolute;
+			filter: opacity(0);
+			animation: switch 1.5s linear  ;
+			animation-fill-mode: forwards;
+			animation-delay: 6s;
 		}
+
+
 	}
 
-
+	.nameContainer {
+	}
 	@keyframes titleAnimation {
 		0% {
 		    transform: scaleY(0);
@@ -250,7 +251,6 @@
 		}
 	}
 }
-
 .On {
 	#name {
 		color: rgba(52, 51, 51, 0.803);
@@ -275,15 +275,15 @@
 		@keyframes imgAnimationHoverOn {
 			0% {
 				border-radius: 50%;
-				box-shadow: 0.1px 0.5px 25px 0px #554d33fa;
+				box-shadow: 0.1px 0.5px 5px 0px #554d33fa;
 			}
 			50% {
 				border-radius: 50%;
-				box-shadow: 0.1px 1px 30px 0px rgba(24, 197, 235, 0.649);	
+				box-shadow: 0.1px 1px 10px 1px rgba(24, 197, 235, 0.649);	
 			}
 			100% {
 				border-radius: 50%;
-				box-shadow: 0.1px 0.5px 25px 0px #554d33fa;
+				box-shadow: 0.1px 0.5px 5px 0px #554d33fa;
 			}
 		} 
 
@@ -449,15 +449,15 @@
 		@keyframes imgAnimationHoverOff {
 			0% {
 				border-radius: 50%;
-				box-shadow: 0.1px 0.5px 35px 0px #05b9d4;
+				box-shadow: 0.1px 0.5px 5px 0px #05b9d4;
 			}
 			60% {
 				border-radius: 40%;
-				box-shadow: 0.1px 1px 60px 0px rgb(255, 255, 255);	
+				box-shadow: 0.1px 1px 20px 0px rgb(255, 255, 255);	
 			}
 			100% {
 				border-radius: 50%;
-				box-shadow: 0.1px 0.5px 25px 0px #05b9d4;
+				box-shadow: 0.1px 0.5px 5px 0px #05b9d4;
 			}
 		} 
 
@@ -654,8 +654,8 @@ and (orientation: portrait)   {
 		#arrow {
 			margin: 0px 0 -20px 15px ;
 		}
-		#switch img {
-			margin: 0 0  0 24px;
+		#switch {
+			margin-left: 7vw;
 		}
 	}
   }
@@ -688,8 +688,8 @@ and (orientation: portrait)   {
 		#arrow {
 			margin: -50px 0 -20px 15px ;
 		}
-		#switch img {
-			margin: 0 0  0 28px;
+		#switch {
+			margin-left: 7vw;
 		}
 	}
   }
@@ -722,11 +722,46 @@ and (orientation: portrait)   {
 		  #arrow {
 			  margin: -50px 0 -20px 15px ;
 		  }
-		  #switch img {
-			  margin: 0 0  0 30px;
-		  }
+		  #switch {
+			margin-left: 7vw;
+		}
+	
 	  }
 	}  
+
+@media  only screen 
+  and (min-width : 768px)
+  and (max-width : 1366px)
+  and (orientation: portrait) {
+	.Home {
+		padding-top: 10vh;
+		.welcome  {
+			padding: 50px 25px;
+			span {
+				font-size: 50px;
+		  	}
+	  	}
+		#name {
+			font-size: 30px;
+			margin: 15vh 0  0 8vw;
+		}
+		#picture img {
+			width: 240px;
+		  	margin: -180px 0 0 500px;
+		}
+		#circle {
+			width: 240px;
+		  	height: 240px;
+			margin: -240px 0 0 500px;
+		}
+		#arrow {
+			margin: -50px 0 -20px 15px ;
+		}
+		#switch {
+			margin-left: 8vw;
+		}
+	}
+} 
 
 /****** LANDSCAPE *************/
 
