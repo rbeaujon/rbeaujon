@@ -15,32 +15,32 @@
 		position:relative;
 		padding-left: 120px;
 		margin: 15vh 0 0 0vw;
-		div {
+		#container {
 			display: flex;
-			gap: 1.2vw;
+			gap: 1vw;
 		}		
 	}
 	#handsOn {
 		position:relative;
-		margin: 10vh 0 0 30vw;
-		div {
+		margin: 10vh 0 0 120px;
+		#container {
 			display: flex;
-			gap: 1.2vw;
+			gap: 1vw;
 		}	
 	}
 	#others {
 		position:relative;
 		padding-left: 120px;
-		margin: 10vh 0 0 30vw;
-		div {
+		margin: 10vh 0 0 0vw;
+		#container {
 			display: flex;
-			gap: 1.2vw;
+			gap: 1vw;
 		}	
 	}
 	#network {
 		position:relative;
-		padding-left: 280px;
-		margin: 10vh 0 0 30vw;
+		padding-left: 120px;
+		margin: 10vh 0 0 0vw;
 	}
 	#effect { 
 		background: rgba(135, 135, 137, 0.898);
@@ -57,9 +57,18 @@
 		}
 
 	}
+	.containerIcons {
+		div {
+			text-transform: uppercase;
+			opacity: 0.4;
+			font-size: 0.6vw;
+			text-align: center;
+
+		}
+	}
 	img {
 		width: 70px;
-		height: auto;
+		height: 70px;
 		&:hover {
 			animation: icons 0.7s ease-out ;
 		}
@@ -116,38 +125,46 @@
 and (min-width : 200px)
 and (orientation: portrait)   {
 	.Skills {
-		height: 170vh;
+		height: 210vh;
 		padding-top: 50px;
 
 		span {
 			font-size: 6vw;
 			margin: -50px 0 0px 0px;	
 		}
+		.containerIcons {
+			div {
+				font-size: 3.5vw;
+			}
+		}
 		#experience {
 			padding: 0 15px;
 			margin: 100px 0 100px 0vw;
-			div {
+			#container {
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 				row-gap: 10px;
+				text-align: center;
 			}		
 		}
 		#handsOn {
 			padding: 0 20px;
 			margin: 70px 0 0 0vw;
-			div {
+			#container {
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 				row-gap: 10px;
+				text-align: center;
 			}	
 		}
 		#others {
 			padding: 0 20px;
 			margin: 70px 0 0 0vw;
-			div {
+		#container {
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 				row-gap: 10px;
+				text-align: center;
 			}	
 		}
 		#network {
@@ -193,10 +210,16 @@ and (orientation: portrait)   {
 			  font-size: 5.5vw;
 			  margin: -50px 0 50px 0px;	
 		  }
+		  .containerIcons {
+			div {
+				font-size: 2.7vw;
+				text-align: center;
+			}
+		}
 		  #experience {
 			  padding: 0 15px;
 			  margin: 90px 0 90px 0vw;
-			  div {
+			  #container {
 				  display: grid;
 				  grid-template-columns: auto auto auto auto;
 				  row-gap: 10px;
@@ -205,7 +228,7 @@ and (orientation: portrait)   {
 		  #handsOn {
 			  padding: 0 20px;
 			  margin: 70px 0 0 0vw;
-			  div {
+			  #container {
 				  display: grid;
 				  grid-template-columns: auto auto auto auto;
 				  row-gap: 10px;
@@ -214,7 +237,7 @@ and (orientation: portrait)   {
 		  #others {
 			  padding: 0 20px;
 			  margin: 70px 0 0 0vw;
-			  div {
+			  #container {
 				  display: grid;
 				  grid-template-columns: auto auto auto auto;
 				  row-gap: 10px;
@@ -256,17 +279,23 @@ and (orientation: portrait)   {
 and (min-width : 380px) 
 and (orientation: portrait)   {
 	.Skills {
-		height: 110vh;
+		height: 140vh;
 		padding-top: 50px;
 
 		span {
 			font-size: 5vw;
 			margin: -40px 0 0 0px;	
 		}
+		.containerIcons {
+			div {
+				font-size: 2.7vw;
+				text-align: center;
+			}
+		}
 		#experience {
 			padding: 0 20px;
 			margin: 110px 0 0 0vw;
-			div {
+			#container {
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 				row-gap: 10px;
@@ -275,7 +304,7 @@ and (orientation: portrait)   {
 		#handsOn {
 			padding: 0 20px;
 			margin: 70px 0 0 0vw;
-			div {
+			#container {
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 				row-gap: 10px;
@@ -284,7 +313,7 @@ and (orientation: portrait)   {
 		#others {
 			padding: 0 20px;
 			margin: 70px 0 0 0vw;
-			div {
+			#container {
 				display: grid;
 				grid-template-columns: auto auto auto auto;
 				row-gap: 10px;
@@ -321,6 +350,83 @@ and (orientation: portrait)   {
 	}
 	
   }
+
+@media  only screen 
+and (min-width : 768px)
+and (max-width : 1366px)
+and (orientation: portrait) {
+	.Skills {
+		height: 85vh;
+		padding-top: 100px;
+
+		span {
+			font-size: 4vw;
+			font-weight: 700;
+			margin: -70px 0 0 0px;	
+		}
+		.containerIcons {
+			div {
+				font-size: 1.7vw;
+				text-align: center;
+			}
+		}
+		#experience {
+			padding: 0 50px;
+			margin: 120px 0 0 0vw;
+			#container {
+				display: grid;
+				grid-template-columns: auto auto auto auto auto auto auto;
+				row-gap: 15px;
+			}		
+		}
+		#handsOn {
+			padding: 40px 20px;
+			margin: 70px 0 0 0;
+			#container {
+				display: grid;
+				grid-template-columns: auto auto auto auto auto auto auto;
+				row-gap: 15px;
+			}	
+		}
+		#others {
+			padding: 0 50px;
+			margin: 70px 0 0 0vw;
+			#container {
+				display: grid;
+				grid-template-columns:  100px 100px 100px  100px 100px;
+				row-gap: 10px;
+			}	
+		}
+		#network {
+			padding: 40px 50px;
+			margin: 70px 0 0 0vw;
+			display: block;
+		}
+		#effect { 
+			background: rgba(135, 135, 137, 0.898);
+			margin: -135px 0 0 -5px;
+			border-radius: 50%;
+			border-right: 1px solid;
+			box-shadow: 0px 1px 20px 5px rgb(4, 209, 250);
+			animation: bg 2s ease-out infinite alternate ;
+			animation-delay: 1s;
+			animation-fill-mode: forwards;
+	
+		}
+	}
+	@keyframes bg {
+		
+		0% {
+			transform: translate(0, 0); 
+		}
+		100% {
+			transform: translate(200px, 0px);
+			opacity: 0;
+		}
+		
+	}
+	
+  }  
 
 /****** LANDSCAPE *************/
 

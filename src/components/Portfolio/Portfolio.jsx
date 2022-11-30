@@ -3,14 +3,15 @@ import React, {useState} from 'react';
 import './Portfolio.scss';
 import matic from '../../assets/images/matic/matic.jpeg';
 import nuestronorte from '../../assets/images/nuestronorte/nnelc.png';
-import jrbs2007 from '../../assets/images/jrbs2007/home.png';
-import perezbravo from '../../assets/images/perezbravo/perezbravo.png';
-import yolo from '../../assets/images/yolo/ppal.png';
+import jrbs2007 from '../../assets/images/jrbs2007/logo.png';
+import perezbravo from '../../assets/images/perezbravo/logo.png';
+import yolo from '../../assets/images/yolo/logo.png';
 import wordle from '../../assets/images/wordle/won.jpg';
-import sicca from '../../assets/images/sicca/ppal.png';
-import positium from '../../assets/images/positium/ppal.png';
-import plasticos from '../../assets/images/plasticos/plasticos.png';
+import sicca from '../../assets/images/sicca/logo.jpg';
+import positium from '../../assets/images/positium/logo.jpeg';
+import plasticos from '../../assets/images/plasticos/logo.jpg';
 import brainbase from '../../assets/images/brainbase/ppal.png';
+import cartubs from '../../assets/images/cartubs/logoCartubs.jpg';
 
 const Portfolio = () => {
 
@@ -24,7 +25,8 @@ const Portfolio = () => {
 		positium: "toClose",
 		jrbs2007: "toClose",
 		perezbravo: "toClose",
-		plasticos: "toClose"
+		plasticos: "toClose",
+		cartubs: "toClose",
 	}
 	const [isOpenOrClose, setisOpenOrClose] = useState(initial)
 
@@ -70,6 +72,10 @@ const Portfolio = () => {
 			const toc = isOpenOrClose.plasticos === 'toClose' ? 'toOpen' : 'toClose';
 			setisOpenOrClose({...initial, plasticos:toc})
 		}
+		if(selection === "cartubs"){
+			const toc = isOpenOrClose.cartubs === 'toClose' ? 'toOpen' : 'toClose';
+			setisOpenOrClose({...initial, cartubs:toc})
+		}
 
 		
 	
@@ -94,7 +100,7 @@ const Portfolio = () => {
 							<p>the design was provided by Figma document and adapted for work on mobile with Middle and High Resolutions in portrait mode.</p>			
 							<p>(2022)</p>	
 						</div>
-						<a href="https://aistica.com/matic" rel="noreferrer"  target="_blank">Visit</a>
+						<a href="http://aistica.com/matic" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
 				<div className={"container " +  isOpenOrClose.brainbase } id="brainbase" onClick={() => handleIsOpen("brainbase")} >
@@ -111,7 +117,7 @@ const Portfolio = () => {
 							<p>Front-End: Angular, Typescript and CSS</p>
 							<p>(2022)</p>		
 						</div>
-						<a href="https://aistica.com/positium" rel="noreferrer"  target="_blank">Visit</a>
+						<a href="http://aistica.com/positium" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
 				<div className={"container " +  isOpenOrClose.nuestronorte } id="nuestronorte" onClick={() => handleIsOpen("nuestronorte")} >
@@ -126,7 +132,7 @@ const Portfolio = () => {
 							<p>Like that they could win excellent awards while accumulating points throughout the month.</p>		
 							<p>(2010)</p>
 						</div>
-						<a href="https://rbeaujon/nuestronorteeslacima/" rel="noreferrer"  target="_blank">Visit</a>
+						<a href="https://aistica.com/agentesdol.com.ve/" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
 				<div className={"container " +  isOpenOrClose.wordle } id="wordle" onClick={() => handleIsOpen("wordle")}>
@@ -219,7 +225,7 @@ const Portfolio = () => {
 							<p>Business website for a Venezuelan law firm</p> 	
 							<p>(2007)</p>	
 						</div>
-						<a href="https://perezbravo.com.ve" rel="noreferrer"  target="_blank">Visit</a>
+						<a href="http://perezbravo.com.ve" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
 				<div className={"container " +  isOpenOrClose.plasticos } id="plasticos" onClick={() => handleIsOpen("plasticos")}>
@@ -231,10 +237,25 @@ const Portfolio = () => {
 						<div className='containerBack'>
 							<p>This used HTML, Javascript, CSS and with a back-end on PHP </p>
 							<p>This is a simple business website to have an internet presence. </p> 
-							<p>Which allows you to manage corporate emails and communication with your customers.</p>
+							<p>Which allows managing corporate emails and the communication with yours customers.</p>
 							<p>(2008)</p>		
 						</div>
-						<a href="https://aistica.com/positium" rel="noreferrer"  target="_blank">Visit</a>
+						<a href="https://plasticoslaurbina.com.ve" rel="noreferrer"  target="_blank">Visit</a>
+					</div>
+				</div>
+				<div className={"container " +  isOpenOrClose.cartubs } id="cartubs" onClick={() => handleIsOpen("cartubs")}>
+					<div className='front'> 
+						<div><img id="cartubs" src={cartubs} alt="cartubs"/></div>
+					</div>
+					<div className='back'>
+						<div className='close' onClick={handleIsOpen}>X</div> 		
+						<div className='containerBack'>
+							<p>This used HTML, Javascript, CSS and with a back-end on PHP </p>
+							<p>This is a simple business website to have an internet presence. </p> 
+							<p>Which allows managing the corporate emails and the communication with yours customers.</p>
+							<p>(2011)</p>		
+						</div>
+						<a href="https://aistica.com/pre/cartubs/FUENTES/WEB/" rel="noreferrer"  target="_blank">Visit</a>
 					</div>
 				</div>
 
